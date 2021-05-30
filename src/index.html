@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<title>Infinity Learn</title>
+
+<head>
+
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/InfinityLearnLogo.ico">
+  <!-- Google Font Embed -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i%7CPlayfair+Display+SC:900" rel="stylesheet"> -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/js/custom-script.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" ></script> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="node_modules/chart.js/src/chart.js"></script>
+  <link rel="stylesheet" href="assets/css/plugin.css">
+  <script src="assets/js/plugin.js"></script>
+
+  <script>
+      jQuery(document).ready(function () {
+
+        //Hamburger Menu
+        jQuery('.hamburger-menu').click(function () {
+          jQuery('header').toggleClass('menu-expend'); 	
+          jQuery('body').toggleClass('no-scroll');
+        });
+        jQuery('.logo-right .m-overlay').click(function () {
+          jQuery('header').removeClass('menu-expend'); 	
+          jQuery('body').removeClass('no-scroll');
+        });
+
+      // Testimonials Slider Script
+      jQuery('.testimonials-slider-wrapper').slick({
+        dots: false,
+        infinite: false,
+        arrows:false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3500,    
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 570,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+
+        // Exam Right Info Script
+        // alert('11111');
+        // jQuery('.btn-toggle').on("click", function () {
+        //   alert('22222');
+        //   jQuery('.exam-wrapper').toggleClass('expend');
+        // });
+      });
+    </script>   
+</head>
+
+<body>
+  <app-root></app-root>
+  
+</body>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  processEscapes: true
+  }
+  });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</html>

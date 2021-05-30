@@ -1,0 +1,64 @@
+<div class="">
+    <mat-dialog-content class="" style="font-family: 'MontSerrat';">
+        <div class="">
+            <h4 style="font-size: 20px; font-weight: 600;">{{ data?.message }}
+                <span *ngIf="!data?.isEditPhoneNumber"><button class="closeButton" (click)="closeDialogue()">X</button></span>
+            </h4>
+        </div>
+        <div class="py-10 font-8" style="font-size: 14px; font-weight: 500;">
+            {{ data?.message2 }}
+            <span>
+                <!-- <a *ngIf="data?.isEditPhoneNumber" style="font-size: 14px; color:#1292ee; float: right; letter-spacing: 0.08em;" (click)="editMobileNumber()">
+                    EDIT
+                </a> -->
+                <a *ngIf="!data?.isEditPhoneNumber || data?.isForgotPassword"style="font-size: 14px; color:#0C9968; float: right; letter-spacing: 0.08em;" (click)="editMobileNumber2()">
+                    EDIT
+                </a>
+                <!-- <a *ngIf="data?.isForgotPassword"style="font-size: 14px; color:#1292ee; float: right; letter-spacing: 0.08em;" (click)="editMobileNumber2()">
+                    EDIT
+                </a> -->
+            </span>
+            <p style="color:#556575; font-size:12px; font-weight: 600;" class="pt-10">OTP Expires in 1 mins</p>
+        </div>
+        <form [formGroup]="form">
+            <div class="py-10 text-center p-5">
+                <ng-otp-input (onInputChange)="onOtpChange($event)" id="otpboxes" [config]="config"></ng-otp-input>
+                <!-- (onInputChange)="onOtpChange($event)" -->
+                <!-- <input type="checkbox" name="pass-input" id="pass-input" [(ngModel)]="config.isPasswordInput"
+                (change)="onConfigChange(config.isPasswordInput)">
+              <span class="s-t">Password input</span> -->
+              <!-- <mat-error *ngIf="" class="font-12 font-w5 color-red" >Error</mat-error> -->
+              <mat-error class="error-msg text-center" *ngIf="errorMessage">
+                {{errorMessage}}
+            </mat-error>
+            </div>
+            
+            <div class="pt-10" *ngIf="data?.isNormalFlow">
+                <button class="btn btn-primary btn-block" id="verifyOtp" [ngClass]="{'no-cursor-pointer': hideVerifyOtp}" 
+                [ngStyle]="{'background-color': hideVerifyOtp ? 'none': (!hideVerifyOtp ? '#263643' : null) }" type="button" [disabled]="hideVerifyOtp" (click)="validateOtp()">VERIFY OTP</button>
+            </div>
+            <div class="pt-10" *ngIf="data?.isLoginWithOtp">
+                <button class="btn btn-primary btn-block" id="verifyOtp" [ngClass]="{'no-cursor-pointer': hideVerifyOtp}" 
+                [ngStyle]="{'background-color': hideVerifyOtp ? 'none': (!hideVerifyOtp ? '#263643' : null) }" type="button" [disabled]="hideVerifyOtp" (click)="validateOtp()">VERIFY OTP</button>
+            </div>
+
+            <div class="pt-10" *ngIf="data?.isEditPhoneNumber">
+                <button class="btn btn-primary btn-block" id="verifyOtp" [ngClass]="{'no-cursor-pointer': hideVerifyOtp}" 
+                [ngStyle]="{'background-color': hideVerifyOtp ? 'none': (!hideVerifyOtp ? '#263643' : null) }" type="button" [disabled]="hideVerifyOtp" (click)="validateOtp2()">VERIFY OTP</button>
+            </div>
+
+            <div class="pt-10" *ngIf="data?.isForgotPassword">
+                <button class="btn btn-primary btn-block" id="verifyOtp" [ngClass]="{'no-cursor-pointer': hideVerifyOtp}" 
+                [ngStyle]="{'background-color': hideVerifyOtp ? 'none': (!hideVerifyOtp ? '#263643' : null) }" type="button" [disabled]="hideVerifyOtp" (click)="validateOtpForForgotPassword()">VERIFY OTP</button>
+            </div>
+            <!-- <div>Time left = <span id="timer"></span></div> -->
+            <div class="" *ngIf="!hideVerifyOtp">
+                <button class="pt-10 btn-link btn-block resend-otp"  type="button">RESEND OTP IN <span>00:{{counter}}</span></button>
+            </div>
+            <div class="" *ngIf="hideVerifyOtp">
+                <button class="pt-10 btn-link btn-block resend-otp" id="resendOtp" (click)="resendOTP()" type="button">RESEND OTP</button>
+            </div>
+        </form>
+    </mat-dialog-content>
+
+</div>

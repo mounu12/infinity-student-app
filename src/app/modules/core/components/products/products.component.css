@@ -1,0 +1,112 @@
+
+
+/* Our Products Section Css Start */
+.our-products-section {
+	width: 100%;
+	padding-bottom: 120px
+}
+
+.our-products-section h6 {
+	text-align: center;
+	padding-bottom: 40px;
+	text-transform: uppercase
+}
+
+.our-products-section .product-box {
+	position: relative;
+	height: 100%;
+	/* min-height: 452px; */
+	min-height: 402px;
+	background-color: #fff;
+	padding: 40px 40px 130px;
+	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.our-products-section .product-box .badge {
+	height: 33px;
+	padding: 0 15px;
+	margin: 0 0 50px;
+	font-size: 12px;
+	line-height: 33px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	border-radius: 21px;
+}
+
+.our-products-section h2 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 600;
+	color: #1E2A36;
+	padding: 0 0 5px;
+	margin: 0
+}
+
+.our-products-section p {
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: 400;
+	color: #324452;
+	padding: 0 0 32px;
+	margin: 0
+}
+
+.our-products-section .btn-link {
+	font-size: 16px;
+	line-height: 15px;
+	font-weight: 600;
+	color: #0C9968;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0 10px 0 0;
+	margin: 0;
+	/* background: url('../img/btn-link-arrow.svg') no-repeat 100% center; */
+	border: inherit
+}
+
+.our-products-section .btn-link:hover {
+	color: rgba(12, 153, 104,0.9);
+	text-decoration: none;
+	padding-right: 15px
+}
+
+.our-products-section .img {
+	position: absolute;
+	bottom: 34px;
+	right: 44px;
+}
+
+@media(max-width:767px) {
+	.our-products-section .product-box {
+		min-height: auto
+	}
+}
+
+@media(max-width:569px) {
+	.our-products-section {
+		padding-bottom: 75px
+	}
+}
+
+@media(max-width:480px) {
+	.our-products-section .product-box {
+		padding: 20px 20px 45px;
+	}
+	.our-products-section .img {
+		height: 35px
+	}
+	.our-products-section .product-box .badge {
+		margin-bottom: 6px
+	}
+	.our-products-section .product-box .badge {
+		height: 28px;
+		font-size: 10px;
+		line-height: 28px;
+	}
+	.our-products-section h2 {
+		font-size: 16px;
+		line-height: 30px
+	}
+}

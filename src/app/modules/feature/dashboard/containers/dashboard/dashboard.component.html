@@ -1,0 +1,23 @@
+
+<div class="assessment-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-2">
+        <app-left-navigation [userObject]="userData"></app-left-navigation>
+
+      </div>
+      <div class="col-12 col-md-10">
+        <div class="welcome-user-info">
+          <h3>Hello {{user.personalDetails?.firstName + ' ' + user.personalDetails?.lastName}}</h3>
+          <p>Take the first step to your goal today</p>
+        </div>
+        <app-my-reports [infoBoxes]="infoBoxes"></app-my-reports>
+        <div class="row">
+          <div class="col-12 col-md-6 mob-margin"  *ngFor="let infobox of infoBoxes">
+              <app-info-box  [infobox]=infobox></app-info-box>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

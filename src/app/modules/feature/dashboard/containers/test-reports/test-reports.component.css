@@ -1,0 +1,19 @@
+.btn {
+    height: 37px;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 16px;
+    border-radius: 48px;
+}
+.report-chart-single-section button.btn.btn-outline-secondary.active  {
+    color: #fff;
+    border-color: #263643;
+    background-color: #263643;
+}
+.mock-test-info{ margin: 45px 0 60px }
+.report-chart-single-section .mock-test-info{ margin: 40px 0 15px }
+.subject-details-report ul.report-list{ margin-bottom: 20px }
+.exam-report-details-section h3{ color: #1E2A36; font-size: 24px; line-height: 28px; font-weight: 600 }

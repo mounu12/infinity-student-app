@@ -1,0 +1,187 @@
+<div class="exam-wrapper">
+    <!-- Exam Left Pannel Start -->
+    <div class="exam-left">
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary mr-3" type="button">Physics</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Chemistry</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Biology</button>
+        </div>
+        <div class="col-6 d-flex justify-content-end question-btn">
+          <button type="button" class="btn-icon mr-10"><img src="assets/img/prev-icon-dark.svg" alt=""></button>
+          <button type="button" class="btn-icon"><img src="assets/img/next-icon-dark.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="exam-question">
+        <div class="exam-question-top">
+          <div class="question-no">
+            Q 7.
+          </div>
+          <div class="question-content">
+            <img class="mb-3" src="assets/img/q7-img.jpg" alt="">
+            <p>Which of the following sedimentary structure can be used as Plaeocurrent direction indicator</p>
+            <ul class="question-list">
+              <li><span class="pr-2">a)</span>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="ansOption1" name="ansOption" class="custom-control-input">
+                  <label class="custom-control-label" for="ansOption1"></label>
+                </div>
+                <img src="assets/img/q7-ans-1.jpg" alt="">
+              </li>
+              <li><span class="pr-2">b)</span>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="ansOption2" name="ansOption" class="custom-control-input">
+                  <label class="custom-control-label" for="ansOption2"></label>
+                </div>
+                <img src="assets/img/q7-ans-1.jpg" alt="">
+              </li>
+              <li><span class="pr-2">c)</span>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="ansOption3" name="ansOption" class="custom-control-input">
+                  <label class="custom-control-label" for="ansOption3"></label>
+                </div>
+                <img src="assets/img/q7-ans-1.jpg" alt="">
+              </li>
+              <li><span class="pr-2">d)</span>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="ansOption4" name="ansOption" class="custom-control-input">
+                  <label class="custom-control-label" for="ansOption4"></label>
+                </div>
+                <img src="assets/img/q7-ans-1.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="exam-question-bottom">
+          <div class="row h-100">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+              <button class="btn btn-mark-review">MARK FOR REVIEW &amp; NEXT</button>
+              <button onclick="window.location.href='exam-page-2.html'" class="btn btn-primary">SAVE AND NEXT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Exam Left Pannel End -->
+
+    <!-- Exam Right Pannel Start -->
+    <div class="exam-right-info">
+      <button type="button" class="btn-toggle"></button>
+      <h4>Physics (20)</h4>
+      <div class="question-no">
+        <button class="btn btn-success">1</button>
+        <button class="btn btn-success">2</button>
+        <button class="btn btn-success">3</button>
+        <button class="btn btn-success">4</button>
+        <button class="btn btn-outline-secondary">5</button>
+        <button class="btn btn-outline-secondary">6</button>
+        <button class="btn btn-warning">7</button>
+        <button class="btn btn-not-answer">8 </button>
+        <button class="btn btn-outline-secondary">9</button>
+        <button class="btn btn-outline-secondary">10</button>
+        <button class="btn btn-outline-secondary">11</button>
+        <button class="btn btn-outline-secondary">12</button>
+        <button class="btn btn-outline-secondary">13</button>
+        <button class="btn btn-outline-secondary">14</button>
+        <button class="btn btn-not-answer">15 <span class="marked-review-icon"><img src="assets/img/marked-review-icon.svg" alt=""></span></button>
+        <button class="btn btn-outline-secondary">16</button>
+        <button class="btn btn-outline-secondary">17</button>
+        <button class="btn btn-outline-secondary">18</button>
+        <button class="btn btn-outline-secondary">19</button>
+        <button class="btn btn-outline-secondary">20</button>
+      </div>
+      <div class="legend-box">
+        <h4>Legend</h4>
+        <ul>
+          <li><img src="assets/img/not-answer.svg" alt=""> <span>Not answered</span> </li>
+          <li><img src="assets/img/answer.svg" alt=""> <span>Answered</span> </li>
+          <li><img src="assets/img/not-visited.svg" alt=""> <span>Not Visited</span> </li>
+          <li><img src="assets/img/not-ans-without-mark.svg" alt=""> <span>Not Answered and Marked for Review</span> </li>
+          <li><img src="assets/img/ans-with-mark-review.svg" alt=""> <span>Answered and Marked for Review</span> </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Exam Right Pannel End -->
+  </div>
+<!--Begin walkthrough Step 1 Start-->
+<div id="step-1" class="walkthrough-steps steps-1" *ngIf="pageNumber === 1">
+    <div class="walkthrough-inner d-flex align-items-end h-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-9">
+            <figure>
+              <img src="assets/img/begin-walkthrough-step-1-img.png" alt="" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="walkthrough-step-content">
+              <p>Hi!<br> Here’s how your live paper will appear. </p>
+              <button type="button" class="btn btn-info btn-sm" (click)="showpage(2)">NEXT <img src="assets/img/next-arrow-dark.svg" alt="">
+              </button>
+              <span class="d-block step-arrow"><img src="assets/img/step-1-arrow.svg" alt=""> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Begin walkthrough Step 2 Start-->
+  <div id="step-2" class="walkthrough-steps steps-2 "  *ngIf="pageNumber === 2">
+    <div class="walkthrough-inner h-100">
+      <div class="container-fluid pr-0 pl-0 d-flex justify-content-end">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-12">
+            <figure>
+              <img src="assets/img/begin-walkthrough-step-2-img.png" alt="" class="img-fluid">
+            </figure>
+            <div class="walkthrough-step-content">
+              <span class="d-block mb-2 step-arrow"><img src="assets/img/step-2-arrow.svg" alt=""> </span>
+              <p>If you wish to see the instructions and the question paper. CLick on the icons above </p>
+              <button type="button" class="btn btn-info btn-sm" (click)="showpage(3)">NEXT <img src="assets/img/next-arrow-dark.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Begin walkthrough Step 3 Start-->
+  <div id="step-3" class="walkthrough-steps steps-3"  *ngIf="pageNumber === 3">
+    <div class="walkthrough-inner h-100">
+      <div class="container-fluid pr-0 pl-0 d-flex align-items-end justify-content-end h-100 ">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-12 d-flex">
+            <div class="walkthrough-step-content">
+              <span class="d-block mb-2 step-arrow"><img src="assets/img/step-3-arrow.svg" alt=""> </span>
+              <p>You’ll see the questions and their status on the right. </p>
+              <button type="button" class="btn btn-info btn-sm" (click)="showpage(4)">NEXT <img src="assets/img/next-arrow-dark.svg" alt="">
+              </button>
+            </div>
+            <figure>
+              <img src="assets/img/begin-walkthrough-step-3-img.png" alt="" class="img-fluid">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Begin walkthrough Step 4 Start-->
+  <div id="step-4" class="walkthrough-steps steps-4"  *ngIf="pageNumber === 4">
+    <div class="walkthrough-inner">
+      <div class="container-fluid pr-0 pl-0 d-flex align-items-start justify-content-start h-100">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-12">
+            <figure>
+              <img src="assets/img/begin-walkthrough-step-4-img.png" alt="" class="img-fluid">
+            </figure>
+            <div class="walkthrough-step-content">
+              <span class="d-block mb-2 step-arrow"><img src="assets/img/step-4-arrow.svg" alt=""> </span>
+              <p>To switch between different sections, you can choose one of the above options</p>
+              <button type="button" class="btn btn-info btn-sm" (click)="showpage(0)">Back to instructions <img src="assets/img/next-arrow-dark.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

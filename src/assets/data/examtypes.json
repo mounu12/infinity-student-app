@@ -1,0 +1,43 @@
+{
+    "exam": "Medical Practice Test",
+    "description": "Neet medical practice exam",
+    "examid": "1233",
+    "totalquestions": 20,
+    "duration": "30",
+    "examtime": "11:45",
+    "span": "AM",
+    "topics": [
+        {
+            "name": "BOTANY",
+            "total": "5",
+            "startfrom": 0,
+            "position": 0,
+            "positionback": 4
+        },
+        {
+            "name": "ZOOLOGY",
+            "total": "5",
+            "startfrom": 5,
+            "position": 1,
+            "positionback": 9
+        },
+        {
+            "name": "PHYSICS",
+            "total": "5",
+            "startfrom": 10,
+            "position": 2,
+            "positionback": 14
+        },
+        {
+            "name": "CHEMISTRY",
+            "total": "5",
+            "startfrom": 15,
+            "position": 3,
+            "positionback": 19
+        }
+    ],
+    "default": "BOTANY",
+    "deftotal": 45,
+    "startfrom": 0,
+    "jsonname": "question1.json"
+}

@@ -1,0 +1,14 @@
+.mat-dialog-content {
+  overflow: hidden;
+}
+
+.closeButton {
+  background: none;
+  float: right;
+  background: none;
+  font-weight: 600;
+  /* margin-top: 5px; */
+  border: 1px solid black;
+  color: black;
+  font-size: 14px;
+}

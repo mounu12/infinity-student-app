@@ -1,0 +1,61 @@
+<!-- <div class="">
+    <mat-dialog-content class="">
+        <div class="py-20 font-14">
+            {{ data?.message }}
+        </div>
+        <div class="font-14">
+            <pre *ngIf="data?.caution">{{ data?.caution }}</pre>
+        </div>
+        <div class="dialog-footer">
+            <div class="pop-btns-set pull-right">
+                <button class="font-12 color-grey2 mr-10" (click)="onNoClick()" mat-button>No</button>
+                <button mat-button tabindex="1" (click)="onConfirmClick()" class="font-12 bg-blue color-white">
+                    Yes
+                </button>
+            </div>
+        </div>
+    </mat-dialog-content>
+    
+</div> -->
+
+
+
+
+<div class="">
+    <mat-dialog-content class="account-box" style="overflow: hidden; scroll-behavior: unset;">
+        <!-- <div class="text-center">
+            <img src="../../../../../assets/img/account-create-confirmed.svg" alt="">
+        </div> -->
+
+        <!-- <div class="accont-created" style="margin-bottom:14px;">
+            <h4 style="font-weight: 600; font-size: 20px; color: #1E2A36;">{{ data?.message }}</h4>
+        </div> -->
+
+        <div class="accont-created-desc" style="margin-bottom:14px;">
+            {{ data?.message }}
+        </div>
+
+        <!-- <div class="account-confirm-links text-center" style="margin-bottom:24px;">
+            <a class="" (click)="accountSetup()">
+                Personlize content in 4 quick steps
+            </a>
+        </div> -->
+
+
+        <!-- <div class="account-confirm-links text-center">
+            <a class="" (click)="navigateToDashboard()">
+                Skip
+            </a>
+        </div> -->
+
+        <div class="dialog-footer">
+            <div class="pop-btns-set pull-right">
+                <button class="font-12 color-grey2 mr-10" (click)="onNoClick()" mat-button>No</button>
+                <button mat-button tabindex="1" (click)="onConfirmClick()" class="font-12 bg-blue color-white">
+                    Yes
+                </button>
+            </div>
+        </div>
+
+        </mat-dialog-content>
+        </div> 

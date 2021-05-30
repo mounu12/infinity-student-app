@@ -1,0 +1,39 @@
+.custom-progress-bar{ width: 100%; height: 10px; margin: 60px 0 32px; border-radius: 32px; position: relative; background: rgba(229, 233, 236, 0.9); }
+.your-score-bar{ height: 10px; background-color: #FBD13A; border-radius: 32px 0 0 32px; position: absolute; left: 0; top: 0 }
+.avg-score-bar{ height: 10px; background-color: rgba(255, 192, 0, 0.3); border-radius: 32px 0 0 32px; position: absolute; left: 0; top: 0 }
+.cutoff-score-bar{ height: 10px; background-color: rgba(229, 233, 236, 0.5); border-right: 1px solid #1E2A36; border-radius: 32px 0 0 32px; position: absolute; left: 0; top: 0 }
+.custom-progress-bar .start-score{ font-size: 14px; line-height: 14px; font-weight: 500; color: rgb(30, 42, 54,0.5); position: absolute; top: 23px; left: 0 }
+.custom-progress-bar .total-score{ font-size: 14px; line-height: 14px; font-weight: 500; color: rgb(30, 42, 54,0.5); position: absolute; top: 23px; right: 0 }
+.your-score-bar > .score{ font-size: 14px; line-height: 14px; font-weight: 600; color:#1E2A36; position: absolute; top: 23px; right:-13px }
+.your-score-bar > .y-score{ position: absolute; top: -95px; right: -33px; text-align: center }
+.your-score-bar > .y-score span.text{ width: 100%; display: block; margin-bottom: 12px; font-size: 12px; line-height: 14px; font-weight: 600; color: #263643; }
+.avg-score-bar > .score{ font-size: 14px; line-height: 14px; font-weight: 500; color:#1E2A36; position: absolute; top: 23px; right: -13px }
+.avg-score-bar > .y-score{ position: absolute; top: -95px; right: -32px; text-align: center }
+.avg-score-bar > .y-score span.text{ width: 100%; display: block; margin-bottom: 12px; font-size: 12px; line-height: 14px; font-weight: 600; color: #263643; }
+.cutoff-score-bar > .score{ font-size: 14px; line-height: 14px; font-weight: 500; color:#1E2A36; position: absolute; top: 23px; right: -13px }
+.cutoff-score-bar > .y-score{ position: absolute; top: -95px; right: -53px; text-align: center }
+.cutoff-score-bar > .y-score span.text{ width: 100%; display: block; margin-bottom: 12px; font-size: 12px; line-height: 14px; font-weight: 600; color: #263643; }
+
+.subjectwise-chart, .subjectwise-chart > div{ width: 175px; height: 175px }
+app-donut-chart > div, app-donut-chart canvas{ width: 175px; height: 175px }
+.chart-wrapper{ width: 100%; position: relative; }
+h6.attempted-text{ font-size: 14px; line-height: 21px; font-weight: 600; text-transform: inherit; color: #556575 }
+h6.attempted-text span{ font-size: 20px; line-height: 21px; color: #324452 }
+ul.legend-list{ padding: 0; margin: 0; position: absolute; right: 30px; top: 0 }
+ul.legend-list li{ padding: 0; margin: 0 0 30px; list-style: none; font-size: 12px; line-height: 18px; font-weight: 600; color: #556575 }
+ul.legend-list li:last-child{  }
+ul.legend-list li span.number{ display: block; padding-top: 5px; padding-left: 22px; font-size: 16px; line-height: 18px; font-weight: 500; color: #1E2A36 }
+ul.legend-list li .status-correct{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #82ECC8; border-radius: 100% }
+ul.legend-list li .status-incorrect{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #FF8C8C; border-radius: 100% }
+ul.legend-list li .status-unattempted{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #E5E9EC; border-radius: 100% }
+
+.subject-wise-breakdown h6.attempted-text{ font-size: 12px }
+.subject-wise-breakdown h6.attempted-text span{ font-size: 16px }
+.subject-wise-breakdown .chart-wrapper{ margin-top: 45px } 
+.subject-wise-breakdown ul.legend-list{ padding: 0; margin: 0; position: absolute; left: 230px; top: 60px }
+.subject-wise-breakdown ul.legend-list li{ float: left; padding: 0; margin: 0 48px 0 0; list-style: none; font-size: 12px; line-height: 18px; font-weight: 600; color: #556575 } 
+.subject-wise-breakdown ul.legend-list li span.number{ display: block; padding-top: 5px; padding-left: 22px; font-size: 16px; line-height: 18px; font-weight: 500; color: #1E2A36 }
+.subject-wise-breakdown ul.legend-list li .status-correct{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #82ECC8; border-radius: 100% }
+.subject-wise-breakdown ul.legend-list li .status-incorrect{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #FF8C8C; border-radius: 100% }
+.subject-wise-breakdown ul.legend-list li .status-unattempted{ width: 16px; height: 16px; margin-right: 2px; display: inline-block; vertical-align: top; background: #E5E9EC; border-radius: 100% }
+

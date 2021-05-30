@@ -1,0 +1,74 @@
+<div class="exam-wrapper solution-wrapper">
+	<!-- Exam Left Pannel Start -->
+	<div class="exam-left">
+		<div class="row">
+			<div class="col-12 top-block">
+			  <!-- button (click) ="backtoviewreportpage()" type="button" 
+			  class="btn-back">{{testname}}</button -->
+			  <img src="assets/img/back-arrow-icon-dark.svg" alt="previous" (click) ="backtoviewreportpage()" />
+			  <div class="heading">Test Solutions | {{examsubmittedon}}</div>
+			</div>
+		  </div>
+		<div class="row">
+			<div class="col-12 btns-container">
+				<!-- <button class="btn btn-primary mr-3" type="button">Physics</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Chemistry</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Biology</button> -->
+				<nz-tabset class="air-tabs" [nzSelectedIndex]="0">
+					<ng-container *ngFor="let top of topics; index as i">
+						<!-- <nz-tab nzTitle="{{top.name}}" (nzClick)="changetopics(top)"></nz-tab> -->
+						<button class="btn topic-btn" [ngClass]="defaulttopicIndex == i ? 'selected-topic' : ''" (click)="changetopics(i, false)"
+							type="button">{{top.name}}</button>
+					</ng-container>
+
+				</nz-tabset>
+				<div class="nav-btns">
+					<div class="nav-btn-left {{defaulttopicIndex == 0 && questioncounter == 0 ? 'disabled-nav-btn': ''}}"  (click)="swipePrevious()">
+						<img src="assets/img/left-arrow.svg" alt="previous">
+					</div>
+					<div class="nav-btn-right {{defaulttopicIndex == topics.length - 1 && questioncounter == deftotal - 1 ? 'disabled-nav-btn': ''}}"  (click)="swipeNext()">
+						<img src="assets/img/right-arrow.svg" alt="next">
+					</div>
+				</div>
+			</div>
+		</div>
+			<div #questionHolder class="exam-question">
+	
+				<div class="exam-question-top solution-top">
+					<div class="question solution">
+						<span class="question-no">
+							Q {{questioncounter + topics[defaulttopicIndex].startfrom}}
+						</span>
+						<div class="solution-content question-content">
+							<div [appMath]="question.questiontext"></div>
+	
+							<!-- <ul class="option-list">
+								<li *ngFor="let qc of questionchoices;index as i"> -->
+	
+							<div class="option-list">
+								<div class="q-option {{qc.isselected ? (question.questionanswer == qc.choiceid ? 'correct-radio': 'incorrect-radio'): (question.questionanswer == qc.choiceid ? 'correct-radio empty-radio': 'empty-radio')}}" *ngFor="let qc of question.questionchoices;index as i">	
+									<div class="radio-green"></div>
+									<div class="option-text" id="{{i+1}}" [appMath]="qc.choicetext"></div>
+								</div>
+	
+								<div class="option" *ngIf="questionchoices.length==0">
+									No options
+								</div>
+	
+							</div>
+							<div class="explanation-block" >
+								 <div class="expl-heading">Explanation</div> 
+								<div [appMath]="question.solution"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- Exam Left Pannel End -->
+
+	<!-- Exam Right Pannel Start -->
+	<app-solution-answer-sheet [startfrom]="topics[defaulttopicIndex].startfrom" [selectedQuestions]="selectedQuestions" [newselectionarray]="newselectionarray">
+	</app-solution-answer-sheet>
+	<!-- Exam Right Pannel End -->
+</div>

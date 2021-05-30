@@ -1,0 +1,68 @@
+
+  <mat-dialog-content class="boards-dialog setup">
+    <div class="step-container mt-25  " *ngIf="!data?.isBoardEdit">
+      <img src="assets/img/back-arrow-icon-dark.svg" class="back" (click)="showPrevStep()"><div class="step">STEP 3/4</div>
+    </div>
+    
+    <div class="heading">
+      {{ data?.message }}
+    </div>
+    <div class="info-div">
+      {{data?.message2}}
+    </div>
+    
+    
+      <input type="text" class="form-control search" placeholder="Search board name" (keyup)="searchBoards($event)">
+      <div class="boards-box pt-20" *ngIf="!data?.isBoardEdit">
+        <div class="board-box {{index === i || data?.boardsData?.id === i ? 'selected': ''}}" *ngFor="let i of searchIndices" (click)="selectBoard(i);saveIndex(i)">
+          
+            <img class="icon-24 mr-8" [src]="boards[i]?.boardimage" alt="">
+            <div>
+              <div class="board-name">
+                {{boards[i]?.boardName}}
+              </div>
+              <div class="board-desc">
+                {{boards[i]?.description}}
+              </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="boards-box pt-20" *ngIf="data?.isBoardEdit">
+        <div class="board-box {{index === i || data?.boardsData?.id === i + 1 ? 'selected': ''}}" *ngFor="let i of searchIndices" (click)="saveIndex(i)">
+          
+            <img class="icon-24 mr-8" [src]="boards[i]?.boardimage" alt="">
+            <div>
+              <div class="board-name">
+                {{boards[i]?.boardName}}
+              </div>
+              <div class="board-desc">
+                {{boards[i]?.description}}
+              </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- <div class="submit-cont" *ngIf="!data?.isBoardEdit">
+        <div class="skip" (click)="onNoClick()">
+          CANCEL
+        </div>
+        <div class="submit-btn" (click)="grade()">
+            SAVE PREFERENCE
+        </div>
+      </div> -->
+
+      <div class="submit-cont" *ngIf="data?.isBoardEdit">
+        <div class="skip" (click)="onNoClick()">
+          CANCEL
+        </div>
+        <div class="submit-btn" (click)="onConfirmClick()">
+            SAVE PREFERENCE
+        </div>
+      </div>
+    
+    
+          
+  </mat-dialog-content>

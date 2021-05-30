@@ -1,0 +1,70 @@
+/* Header Section Css Start */
+header{width:100%;height:77px;padding:0 20px;background-color:#fff;position:fixed;top:0;left:0;z-index:1000;box-shadow:0 4px 77px rgba(0,0,0,0.05)}
+.logo{width:219.58px;height:100%;display:flex;align-items:center;float:left}
+.logo img{width:219.58px;height:37px}
+.logo-right{height:77px;margin-left:270px;display:flex;align-items:center;justify-content:space-between}
+.logo-right nav{padding:0;margin:0}
+.logo-right nav ul{padding:0;margin:0}
+.logo-right nav ul li{position:relative;font-size:14px;line-height:77px;font-weight:600;list-style:none;float:left;padding:0;margin:0 40px 0 0;text-transform:uppercase}
+.logo-right nav ul li a.nav-link{padding:0;color:#748494;display:block}
+.logo-right nav ul li a:hover{color:#F16667}
+.logo-right nav .dropdown-menu{width:214px;padding:0;margin:0;border-radius:10px;box-shadow:0 2px 20px rgba(0,0,0,0.1);border:inherit}
+.logo-right nav .dropdown-menu .dropdown-item{font-size:14px;line-height:18px;font-weight:600;letter-spacing:.03em;text-align:left;display:block;padding:14px 20px;color:#748494;background-color:#fff;border-bottom:1px solid #d5dce2;text-transform:uppercase}
+.logo-right nav .dropdown-menu .dropdown-item img{width:22px;margin-right:16px}
+.logo-right nav .dropdown-menu .dropdown-item:first-child{border-radius:10px 10px 0 0}
+.logo-right nav .dropdown-menu .dropdown-item:last-child{border-bottom:inherit;border-radius:0 0 10px 10px}
+.logo-right nav .dropdown-menu .dropdown-item:hover{color:#324452}
+.btn-login{color:#fff;background-color:#324452;padding:9px 20px;border-radius:100px;font-size:14px;font-weight:600;text-transform:uppercase;border:inherit;letter-spacing:.08em}
+.btn-login:hover{color:#fff;background-color:#426a8b}
+.hamburger-menu{display:none}
+/* new css from old branch */
+
+/* Header Section Css Start */
+.logo-right nav .dropdown-menu .dropdown-item img{width:22px;margin-right:16px}
+.logo-right nav .dropdown-menu .dropdown-item img.hover{display:none}
+.logo-right nav .dropdown-menu .dropdown-item:hover img.normal{display:none}
+.logo-right nav .dropdown-menu .dropdown-item:hover img.hover{display:inline-block}
+.logo-right nav .dropdown-menu .dropdown-item:first-child{border-radius:10px 10px 0 0}
+.logo-right nav .dropdown-menu .dropdown-item:last-child{border-bottom:inherit;border-radius:0 0 10px 10px}
+.logo-right nav .dropdown-menu .dropdown-item:hover{color:#324452}
+.btn-login{color:#fff;background-color:#263643;padding:9px 20px;border-radius:100px;font-size:14px;font-weight:600;text-transform:uppercase;border:inherit;letter-spacing:.08em}
+.btn-login:hover{color:#fff;background-color:#426a8b}
+
+header .profile-btn-group{ position: absolute; top: 12px; right: 0 }
+
+.hamburger-menu, .m-logo, .m-overlay{display:none}
+@media (max-width: 768px) {
+  header{ height: 66px; padding:15px 0;box-shadow:inherit; background: #fff }
+  .menu-expend header{ background: inherit }
+  .hamburger-menu{position:absolute;top:9px;left:15px;z-index:9;cursor:pointer;display:block;float:right;margin:0;width:16px;clear:both;cursor:pointer}
+  .hamburger-menu span{background:#263643;display:block;height:2px;margin-bottom:4px;width:100%;float:right;cursor:pointer!important;border-radius:5px}
+  .menu-expend .hamburger-menu{top:15px}
+  .menu-expend .hamburger-menu span{height:2px;color:inherit;background-color:#263643!important}
+  .menu-expend .hamburger-menu span:first-child{-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+  .menu-expend .hamburger-menu span:nth-child(2){display:none}
+  .menu-expend .hamburger-menu span:last-child{margin:-6px 0 0;-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+  .logo-right{width:240px;height:100vh;display:block;padding:32px 16px;margin-left:0;position:fixed;top:0;left:-100%;z-index:9999;background-color:#fff}
+  .logo img { margin-left: 40px!important; width: 175px!important;}
+  
+  .logo-right nav ul li{display:block;float:none;line-height:inherit;margin:24px 0}
+  .menu-expend .logo-right{left:0}
+  .btn-login{padding:10px 25px}
+  .m-logo{ width: 137px; display: block }
+  .m-logo img{ width: 100%; display: block }
+  .btn-login{ width: calc(100% - 32px); position: absolute; bottom: 32px; left: 16px }
+  .m-overlay{width:100%;height:100vh;position:fixed;left:0;top:0;opacity: 0; visibility: hidden; background:rgba(0,0,0,0.2); content: ''; display: block; -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;}
+  .menu-expend .m-overlay{left: 240px; opacity: 1; visibility: visible}
+  .logo-right nav .dropdown-menu{ position: relative !important; top: inherit !important; left: inherit !important; transform: inherit !important; box-shadow: inherit }
+  .logo-right nav .dropdown-menu .dropdown-item{ text-transform:capitalize }
+
+  header .profile-btn-group{ top: -3px; right: 15px }
+  .profile-btn-group button.dropdown-toggle img{ width: 32px; height: 32px; }
+  .profile-btn-group button.dropdown-toggle:after{ width: 8px; background-size: 8px; margin-left: 8px }
+} 
+span.in_warning {
+  color: red;
+}

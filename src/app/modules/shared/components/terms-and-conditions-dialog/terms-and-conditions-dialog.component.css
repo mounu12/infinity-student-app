@@ -1,0 +1,11 @@
+.content{
+    color: #263643;
+}
+.terms-box{
+    cursor: pointer;
+}
+h4{ font:600 16px/24px Montserrat, sans-serif; color: #263643 }
+h5{ font:600 12px/18px Montserrat, sans-serif; color: #263643; padding-bottom: 5px }
+p{ font:500 12px/18px Montserrat, sans-serif; color: #263643 }
+ol, ul{ padding: 0; margin: 0; }
+ol li, ul li{ padding: 0; margin: 0 0 15px; font:500 12px/18px Montserrat, sans-serif; color: #263643; list-style-position: inside}

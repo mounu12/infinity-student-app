@@ -1,0 +1,29 @@
+<div class="">
+    <mat-dialog-content class="account-box" style="overflow: hidden; scroll-behavior: unset;">
+        <div class="text-center">
+            <img src="../../../../../assets/img/account-create-confirmed.svg" alt="">
+        </div>
+
+        <div class="accont-created" style="margin-bottom:14px;">
+            <h4 style="font-weight: 600; font-size: 20px; color: #1E2A36;">{{ data?.message }}</h4>
+        </div>
+
+        <div class="accont-created-desc" style="margin-bottom:14px;">
+            {{ data?.message2 }}
+        </div>
+
+        <div class="account-confirm-links text-center" style="margin-bottom:24px;">
+            <a class="" (click)="accountSetup()">
+                Personlize content in 4 quick steps
+            </a>
+        </div>
+
+
+        <div class="account-confirm-links text-center">
+            <a class="" (click)="navigateToDashboard()">
+                Skip
+            </a>
+        </div>
+
+        </mat-dialog-content>
+        </div> 

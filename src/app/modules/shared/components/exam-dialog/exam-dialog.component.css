@@ -1,0 +1,167 @@
+.back{
+    cursor: pointer;
+    width: 4.5px;
+height: 9px;
+margin-right: 10px;
+}
+
+.step {
+    font-size: 14px;
+    color: #263643;
+    display: inline-block;
+    line-height: 17px;
+    font-weight: 600;
+    font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color:#263643;
+  opacity:0.6;
+}
+
+.step-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 24px;
+    color: #1E2A36;
+    line-height: 1.3;
+ }
+
+.info-div {
+    margin: 8px 0px 24px;
+    color: #556575;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.exam-box {
+display: flex;
+flex-direction: row;
+padding: 8px;
+cursor: pointer;
+
+width: 227px;
+min-height: 77px;
+
+background: #FFFFFF;
+
+
+box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+
+
+
+
+margin-top: 16px;
+}
+.exam-box:hover {
+    transform: scale(1.04);
+  }
+.exams-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: -16px;
+}
+.exam-name{
+height: 21px;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 150%;
+display: flex;
+align-items: center;
+color: #263643;
+margin: 4px 0px;
+}
+
+
+.exam-desc{
+height: 36px;
+font-size: 12px;
+line-height: 150%;
+display: flex;
+align-items: center;
+color: #556575;
+margin: 4px 0px;
+}
+
+
+
+::placeholder {
+    font-size: 14px;
+line-height: 150%;
+color: #748494;
+}
+.mid-img {
+    align-self: center;
+}
+
+.exam-box.selected {
+    background: #EAFFF8;
+border: 1px solid #0C9968;
+box-sizing: border-box;
+box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.05);
+}
+.submit-cont {
+    display: flex; 
+    align-items: center;
+    align-self: stretch;
+    font-size:14px;
+    margin-top: 24px; 
+    justify-content: flex-end
+  }
+  
+  .skip {
+  height: 17px;
+  
+  
+  
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  
+  text-align: right;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  color: #0C9968;
+  
+  }
+  
+  .submit-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    color: white; 
+    font-weight: 600;
+    background: #263643;
+    border-radius: 56px;
+    cursor: pointer;
+  
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  
+  /* Color/Dark Grey/500 */
+  
+  background: #263643;
+  border-radius: 32px;
+  
+  /* Inside Auto Layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 0px 0px 32px;
+    }

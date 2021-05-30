@@ -1,0 +1,108 @@
+
+<section class="assessments-section wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 text-center">
+          <span class="badge badge-success">Assessments</span>
+          <h1>Take your <span class="text-success">Test Preparation</span> <br> to the next level</h1>
+          <h5>Ace your tests to build confidence for your finals exams</h5>
+          <form method="POST">
+            <p>Get started with just your phone number</p>
+            <!-- <div class="form-group">
+              <select class="country-code">
+                <option>+91</option>
+                <option>+1</option>
+              </select>
+              <input type="text" class="form-control" autofocus>
+              <button type="button" class="btn btn-primary" (click)="signup()">START LEARNING</button>
+            </div> -->
+            <app-common-mobile-number (mobileNumberChange)="doSearch($event)" (callSignUp)="signup()">
+            </app-common-mobile-number>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What We Offer Section Start -->
+  <section class="what-we-offer-section">
+    <div class="container-fluid">
+      <div class="row wow fadeInUp" data-wow-delay="0.3s">
+        <div class="col-12 text-center">
+          <h6>What we offer</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4 mb-10">
+          <div class="wwo-box wow fadeInLeft" data-wow-delay="0.4s">
+            <img class="icon" src="assets/img/papers-icon.svg" alt="Papers">
+            <h3>Previous Year Papers</h3>
+            <p>Revise and prepare with previous year papers to for assured success.</p>
+            <button type="button" class="btn-link">Explore</button>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4 mb-10">
+          <div class="wwo-box wow fadeInLeft" data-wow-delay="0.4s">
+            <img class="icon" src="assets/img/mock-test-icon.svg" alt="Mock Test">
+            <h3>Mock Tests</h3>
+            <p>Take mock tests for FREE with simulated test environment.</p>
+            <button type="button" class="btn-link">Explore</button>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4 mb-10">
+          <div class="wwo-box wow fadeInLeft" data-wow-delay="0.4s">
+            <img class="icon" src="assets/img/report-icon.svg" alt="Report">
+            <h3>Detailed Reports</h3>
+            <p>Get detailed report and analysis of mock tests and previous papers.</p>
+            <button type="button" class="btn-link">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- What We Offer Section End -->
+    <!-- Footer Start -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <a class="f-logo" href="javascript:void(0)">
+            <img src="assets/img/logo-light.svg" alt="">
+          </a>
+        </div>
+        <div class="col-12 col-md-8 footer-cols">
+          <nav class="footer-nav">
+            <ul>
+              <li><a routerLink="/about-us">About Us</a></li>
+              <li><a routerLink="#">Our Products</a></li>
+              <li><a routerLink="/assesments">Assessments</a></li>
+              <li><a routerLink="#">Live Classes</a></li>
+              <li><a href="javascript:void(0)" (click)="openTermsAndConditionsDialog()">Privacy Policy</a></li>
+              <li><a href="javascript:void(0)" (click)="openTermsAndConditionsDialog()">Terms & Conditions</a></li>
+              <li><a routerLink="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!-- <div class="footer-col c1">
+              <span class="f-link" routerLink="/about-us">About Us</span>
+            </div>
+            <div class="footer-col c2">
+              <span class="f-link">Our Products</span>
+              <span class="sub-link">
+                Assessments
+              </span>
+              <span class="sub-link">
+                Live Classes
+              </span>
+            </div>
+            <div class="footer-col c3">
+              <span class="f-link">Privacy Policy</span>
+              <span class="f-link mt-8">Terms & Conditions</span>
+            </div>
+            <div class="footer-col c4">
+              <span class="f-link">Contact Us</span>
+            </div>  -->
+        </div>
+      </div>
+    </div>
+  </footer>
+      <!-- Footer End -->

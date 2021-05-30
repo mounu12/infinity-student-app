@@ -1,0 +1,13 @@
+<div class="info-box">
+    <img class="icon" src={{infobox.logo}} alt="">
+    <h4>{{infobox.heading}}</h4>
+    <h5><span class="text-success">{{infobox.paper.completed}} completed</span> <span class="pl-2 pr-2">•</span> {{infobox.paper.total}} Papers</h5>
+    <p>{{infobox.infotext}}</p>
+    <ng-container *ngIf="infobox.paper.total>0 && infobox.paper.completed==0 && infobox.heading=='NEET Mock Tests'; else openListLink">
+      <a href="javascript:void(0)" (click)="attemptFirstPaper(infobox)" type="button" class="btn-link">ATTEMPT A TEST</a>
+    </ng-container>
+    <ng-template #openListLink>
+      <a href={{infobox.link.route}} type="button" class="btn-link">{{infobox.link.label}}</a>
+    </ng-template>
+    
+  </div>

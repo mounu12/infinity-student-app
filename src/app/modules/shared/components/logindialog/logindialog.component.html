@@ -1,0 +1,32 @@
+<div class="signIn-modal">
+  <div class="heading-title">
+      {{ data?.message }}
+  </div>
+      <!-- <mat-dialog-content> -->
+      <form [formGroup]="loginForm" class="pt-20">
+
+          <!-- <span class="count-code">
+              <mat-select value="+91">
+                  <mat-option value="+91">+91</mat-option>
+                  <mat-option value="+1">+1</mat-option>
+              </mat-select>
+          </span> -->
+          <!-- <input class="frame-phn-num" type="text" maxlength="10" formControlName="phone" placeholder="Phone Number"
+              phone-number> -->
+              <div class="form-group 111">
+          <ngx-intl-tel-input [cssClass]="'intelTel font-w6 form-control'"
+          [preferredCountries]="[CountryISO.India]" [enableAutoCountrySelect]="false"
+              [enablePlaceholder]="false" [searchCountryFlag]="true"
+              [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" [selectFirstCountry]="false"
+              [selectedCountryISO]="CountryISO.India" maxLength="10" [phoneValidation]="true" [separateDialCode]="true"
+              name="phone" formControlName="phone" (keypress)="enterKey($event)" 
+              (keyup)="doSearch($event)" readonly></ngx-intl-tel-input>
+          </div>
+          <!-- <div class="btn-next"> -->
+              <button class="btn btn-primary btn-block" [disabled]="!loginForm.valid || !mobileNumberValid"  type="button" (click)="doSearch($event);passwordLogin()">NEXT</button>
+          <!-- </div> -->
+          <!-- <app-common-mobile-number (mobileNumberChange)="doSearch($event)" (callSignUp)="passwordLogin()">
+  </app-common-mobile-number> -->
+      </form>
+      <!-- </mat-dialog-content> -->
+  </div>

@@ -1,0 +1,82 @@
+<div class="instructions-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a (click)="back()" type="button" class="btn btn-outline-secondary mb-25"><img class="ml-0 mr-2" src="/assets/img/back-arrow-icon-dark.svg" alt=""> GO BACK</a>
+          <h3>General Instructions</h3>
+          <ol>
+            <li>Total duration of this test is <strong>180 minutes.</strong> </li>
+            <li>There will be <strong>180 Single Option Correct Multiple Choice Questions.</strong></li>
+            <li>There are <strong>3 sections</strong> in the question paper consisting of <strong>45 questions</strong>
+              of <strong>Physics, 45 questions</strong> of <strong>Chemistry</strong> and <strong>90 questions</strong>
+              of <strong>Biology</strong></li>
+            <li>Each question is allotted <strong>4 (Four)</strong> marks for correct response.</li>
+            <li><strong>1 (One) mark will be deducted</strong> for indicating incorrect response for each question.</li>
+            <li><strong>No marks</strong> will be deducted for not attempting a question. </li>
+          </ol>
+          <h3>Test Taking Instructions</h3>
+          <ol>
+            <li>The countdown timer in the top right corner of screen will display the remaining time available for you
+              to complete the examination. </li>
+            <li>When the timer reaches zero, the examination will end by itself. You will not be required to end or
+              submit your examination.</li>
+            <li>The Questions Palette displayed on the right side of screen will show the status of each question using
+              one of the following symbols:
+              <ul class="legend-list">
+                <li><img src="assets/img/not-answer.svg" alt=""> You have <strong>NOT Answered </strong> the question.
+                </li>
+                <li><img src="assets/img/answer.svg" alt=""> You have <strong>Answered</strong> the question. </li>
+                <li><img src="assets/img/not-visited.svg" alt=""> You have <strong>NOT Visited</strong> the question.
+                </li>
+                <li><img src="assets/img/not-ans-without-mark.svg" alt=""> <strong>Answered and Marked for
+                    Review.</strong> These questions will <strong>be considered</strong> for evaluation. </li>
+                <li><img src="assets/img/ans-with-mark-review.svg" alt=""> <strong>Not Answered and Marked for
+                    Review.</strong> These questions will <strong>NOT be considered</strong> for evaluation. </li>
+                <li><img src="assets/img/instruction-icon.svg" alt=""> To view instructions during the test, click on
+                  this icon </li>
+                <li><img src="assets/img/question-list-icon.svg" alt=""> To see a comprehensive list of your questions
+                  during the test, click on this icon </li>
+              </ul>
+            </li>
+            <li>You can click on the "icon" which appears to the left of question palette to collapse the question
+              palette thereby maximizing the question window. To view the question palette again, you can click on
+              "icon" which appears on the right side of question window.</li>
+            <li>Click on the question number in the Question Palette at the right of your screen to go to that numbered
+              question directly. <strong>Note that using this option does NOT save your answer to the current
+                question.</strong> </li>
+            <li>Click on <strong>Save &amp; Next to save your answer</strong> for the current question and then go to the
+              next question.</li>
+            <li>Click on <strong>Mark for Review &amp; Next to save your answer</strong> for the current question, mark it
+              for review for
+              later, and then go to the next question.</li>
+            <li>To <strong>DESELECT your chosen answer, click on the button of the chosen option again.</strong> </li>
+            <li>Click on the <strong>“Answered”, “Not Answered”, “Answered and Marked for Review”</strong> and
+              <strong>“NOT Answered and Marked
+                for Review”</strong> tiles on the Question palette to view the relevant question numbers subject wise.
+            </li>
+            <li>Once you have finished taking the examination, please click on the <strong>“Submit”</strong> button.
+            </li>
+            <li>For receiving an advanced test feedback analysis make sure you:
+              <ul class="sub-list">
+                <li>Attempt at least 10% of the total questions in the test. </li>
+                <li>Spend at least 10% of the total test time.</li>
+              </ul>
+            </li>
+          </ol>
+          <form #agreeForm="ngForm" *ngIf="!is_exam_started">
+              <div class="custom-control custom-checkbox agree-text mb-25">
+                <input required type="checkbox" class="custom-control-input" name="aggree" [(ngModel)]="aggree"  [ngModelOptions]="{standalone:true}" id="agreeCheck">
+                <label class="custom-control-label" for="agreeCheck">I Agree that I have read and understood all the
+                  instructions. </label>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button [disabled]="!aggree" (click)="beginWalkthrough()" class="btn btn-info" type="button">BEGIN
+                  WALKTHROUGH</button>
+                <button [disabled]="!aggree" (click)="beginTest()" class="btn btn-primary" type="button">BEGIN
+                  TEST</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,462 @@
+<app-header></app-header>
+  <!-- Start Learning Section Start -->
+
+  <!-- Start Learning Section Start -->
+  <section class="start-learning-section wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 text-center">
+          <h1 style="font-family: Montserrat; font-weight: 600;">We believe that learning <br/>should be 
+            <span class="text-danger">infinite</span> and <span class="badge badge-danger" style="font-family: Montserrat; font-weight: 600;">fun</span>   </h1>
+          <h5 style="font-weight: 500; color:#324452; opacity: 0.8; font-family: Montserrat; font-size:20px; font-style: normal; padding-bottom:40px">Learn with us and boost your exam preparation</h5>
+          <p>Get started with just your phone number</p>
+          <form method="POST">
+            <!-- <div class="form-group">
+              <mat-select value="+91" class="country-code" [(ngModel)]="this.data.countryCode" name="countryCode">
+                <mat-option value="+91">+91</mat-option>
+                <mat-option value="+1">+1</mat-option>
+              </mat-select>
+              <input type="number" class="form-control" maxlength="10" autofocus [(ngModel)]="this.data.mobile" name="mobile">
+              <button type="button" class="btn btn-danger" (click)="signup()" [disabled]="!this.data.mobile">START LEARNING</button>
+            </div> -->
+            <app-common-mobile-number id="StartLearningMobileInput" (mobileNumberChange)="doSearch($event)" (keyup.enter)="enterKey($event)" (keyup.escape)="escapeKey($event)" (callSignUp)="signup()">
+            </app-common-mobile-number>
+            <mat-error *ngIf="err?.phone.touched && !err?.phone.valid" class="error-msg">
+              <!-- Please, Enter 10 digit Mobile Number -->
+            </mat-error>
+            <!-- <button type="button" class="btn btn-danger" (click)="signup()">START LEARNING</button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Start Learning Section End -->
+<app-products></app-products>
+<!-- Why choose Us Section Start -->
+<section class="why-choose-us-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h6>what we offer</h6>
+          <h2>Wondering why you should <span class="text-danger">choose us?</span></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="offer-box text-center wow fadeInUp" data-wow-delay="0.2s">
+                <img src="assets/img/detailed-reports-icon.svg" alt="">
+                <p>Detailed Reports</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="offer-box text-center wow fadeInUp" data-wow-delay="0.2s">
+                <img src="assets/img/adaptive-learning-icon.svg" alt="">
+                <p>Adaptive Learning</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="offer-box text-center wow fadeInUp" data-wow-delay="0.2s">
+                <img src="assets/img/personalized-coaching-icon.svg" alt="">
+                <p>Personalized coaching </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why choose Us Section End -->
+ <!-- Our team Section start -->
+ <section class="our-team-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+          <h6>our team of experts</h6>
+          <h2>Meet our awesome teachers</h2>
+          <div class="teachers-slider">
+            <!-- <div class="slide-btn left">
+            </div> -->
+            <div class="slides-bg">
+
+            </div>
+            <div class="current-slide">
+              <img src="/assets/img/Murali-Krishna.png" />
+              <div class="teacher-name">
+                Murali Krishna
+              </div>
+              <div class="teacher-desc">
+                24 years experience with 10000+ successful students in medical entrance exam
+              </div>
+            </div>
+            <!-- <div class="slide-btn right">
+            </div> -->
+          </div>
+          <div class="d-flex justify-content-center view-all-fac">
+            <button type="button" class="btn btn-primary d-flex align-items-center">view All faculty <img
+                src="assets/img/btn-right-arrow.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our team Section end -->
+
+
+<!-- Ready to Start Learning Section Start -->
+<section class="ready-learning-section wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Ready to start learning with us?</h2>
+          <p>Join 5,000 other happy students in our quest<br> to infinite fun and learning</p>
+          <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 text-center">
+              <!-- <div class="form-group">
+                <mat-select value="+91" class="country-code">
+                  <mat-option value="+91">+91</mat-option>
+                  <mat-option value="+1">+1</mat-option>
+                </mat-select>
+                <input type="text" maxlength="10" class="form-control">
+                <button type="button" class="btn btn-danger">START LEARNING</button>
+              </div> -->
+              <app-common-mobile-number (mobileNumberChange)="doSearch($event)"
+              (keyup.enter)="enterKey($event)" (keyup.escape)="escapeKey($event)" (callSignUp)="signup()">
+              </app-common-mobile-number>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ready to Start Learning Section End -->
+
+ <!-- Testimonials Section  Start -->
+ <section class="testimonials-section">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-delay="0.2s">
+      <div class="col-12 text-center">
+        <h6>TESTIMONIALS</h6>
+        <!-- <div class="news-header">Testimonials</div> -->
+        <h2>Both students and parents <span class="text-danger">love us</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="testimonials-slider-wrapper">
+          <div class="testimonials-slides">
+            <div class="t-content">
+              I am Sunil Kumar Vishwesh. I am happy on my success, I give credit of my success to Sri
+              Chaitanya college, my faculty and to my parents who supported throughout the preparation.
+              Daily homework, Series on online tests, micro analysis and Consistent hard work leads me to
+              success.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/sunil-kumar.jpg" alt="">
+              <div class="info-right">
+                <h6>Sunil Kumar Vishwesh </h6>
+                <p>AIR 1, JEE Main 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              My Name is Landa Jitendra, My JEE Main AIR is 4. Sri Chaitanya faculty members and staff, my
+              parents have greatly supported me at my preparation. I always completed my homework and
+              also revised the test taken many times. I would suggest struggle till the exam is not cleared.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/landa-jitendra.jpg" alt="">
+              <div class="info-right">
+                <h6>Landa Jitendra</h6>
+                <p>AIR 4, JEE Main 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              I am a proud student of Sri Chaitanya which guided me in achieving success in NEET Entrance
+              Exam. This goal would not have been reachable if it were not for my teachers at Sri Chaitanya
+              and so I give the credit for my success to all the faculty.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/r-shashannk.jpg" alt="">
+              <div class="info-right">
+                <h6>R Shashank Anirudh</h6>
+                <p>AIR 7, JEE Main 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              I am extremely happy about my success. I have really worked hard in these 3 years and finally
+              got the fruit of my hard work. My parents supported me throughout and Sri Chaitanya also
+              guided me through its study material and tests.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/g-bhuban.jpg" alt="">
+              <div class="info-right">
+                <h6>G. Bhuvan Reddy</h6>
+                <p>AIR 2, JEE Advanced 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              My journey with Sri Chaitanya started 3 years ago. It has been the most amazing experience
+              studying in Chaitanya. I gained a lot of experience like how to cope up with different
+              situations in life. The teaching faculty has really helped in clearing my doubts and
+              strengthening my concepts.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/dhvant.jpg" alt="">
+              <div class="info-right">
+                <h6>Dhvanit Beniwal</h6>
+                <p>AIR 10, JEE Advanced 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              I am Snikitha Tummala. I was a regular classroom student at Sri Chaitanya.This dream would
+              never have been true without the help of my parents and teachers at Sri Chaitanya. My
+              success mantra for achieving this goal and that is all what makes you lucky on the day of the
+              exam.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/Snikitha.jpg" alt="">
+              <div class="info-right">
+                <h6>Snikitha Tummala</h6>
+                <p>AIR 3, NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              I am Chaitanya Sindhu. I was a regular classroom student at Sri Chaitanya. I was interested in
+              joining one the best NEET Coaching and believed that Sri Chaitanya is the best choice. Their
+              techniques, material and completely organized structure helped me to move along the right
+              path.
+            </div>
+            <div class="user-info">
+              <img src="assets/img/Chaitanya.jpg" alt="">
+              <div class="info-right">
+                <h6>Chaitanya Sindhu</h6>
+                <p>AIR 3, NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/WAGgIJTzQpc"></div>
+                <img src="assets/img/Landa-Jitendra-video-pic.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>Landa Jitendra </h6>
+                <p>AIR 4, JEE Main 2020  </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/dDwr6gCpZos"></div>
+                <img src="assets/img/R-S-Anirudh-video-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>R S Anirudh </h6>
+                <p>AIR 7, JEE Main 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/8cfMMyrsXzU"></div>
+                <img src="assets/img/Shoyeb-Afthab-video-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>Shoyeb Afthab </h6>
+                <p>AIR 1 (DLP), NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/np-DpfBAA4U"></div>
+                <img src="assets/img/Snikita Thummala-video-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>Snikita Thummala </h6>
+                <p>AIR 3, NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/nI4Dwrk2Qac"></div>
+                <img src="assets/img/Chaitanya Sindhu-video-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>Chaitanya Sindhu </h6>
+                <p>AIR 6, NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-slides">
+            <div class="t-content">
+              <div class="video-wrapper">
+                <div class="btn-video-play" data-fancybox href="https://www.youtube.com/embed/a6B3wdBImwk "></div>
+                <img src="assets/img/Ananta Parakrama-video-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="user-info">
+              <div class="info-right ml-0">
+                <h6>Ananta Parakrama </h6>
+                <p>AIR 11, NEET 2020 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary d-flex align-items-center">Read More <img
+              src="assets/img/btn-right-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section End -->
+
+<div class="news-section">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-delay="0.2s">
+      <div class="col-12 text-center">
+        <div class="news-header">NEWS</div>
+        <div class="news-desc">Always stay <span class="text-danger">updated</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-xs-12">
+        
+        <div class="news-slider-wrapper">
+          <div class="col-lg-4 col-sm-4 col-12">
+            <div class="news-slides">
+              <div class="news-img">
+                <img src="assets/img/news1.jpg" />
+                <div class="news-play" >
+                </div>
+              </div>
+              <div class="news-title mt-55">
+                NEET dates announced
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-12">
+            <div class="news-slides">
+              <div class="news-img">
+                <img src="assets/img/news2.jpg" />
+                <div class="news-play" >
+                  
+                </div>
+              </div>
+              <div class="news-title mt-55">
+                JEE Scores have been published!
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-12">
+            <div class="news-slides">
+              <div class="news-img">
+                <img src="assets/img/news1.jpg" />
+                <div class="news-play" >
+                  
+                </div>
+              </div>
+              <div class="news-title mt-55">
+                IIT tips from Experts
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary d-flex align-items-center">Explore More <img
+              src="assets/img/btn-right-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   
+  <!-- Footer Start -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <a class="f-logo" href="javascript:void(0)">
+            <img src="assets/img/logo-light.svg" alt="">
+          </a>
+        </div>
+        <div class="col-12 col-md-8 footer-cols">
+          <nav class="footer-nav">
+            <ul>
+              <li><a routerLink="/about-us">About Us</a></li>
+              <li><a routerLink="#">Our Products</a></li>
+              <li><a routerLink="/assesments">Assessments</a></li>
+              <li><a routerLink="#">Live Classes</a></li>
+              <li><a href="javascript:void(0)" (click)="openTermsAndConditionsDialog()">Privacy Policy</a></li>
+              <li><a href="javascript:void(0)" (click)="openTermsAndConditionsDialog()">Terms & Conditions</a></li>
+              <li><a routerLink="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!-- <div class="footer-col c1">
+            <span class="f-link" routerLink="/about-us">About Us</span>
+          </div>
+          <div class="footer-col c2">
+            <span class="f-link">Our Products</span>
+            <span class="sub-link">
+              Assessments
+            </span>
+            <span class="sub-link">
+              Live Classes
+            </span>
+          </div>
+          <div class="footer-col c3">
+            <span class="f-link">Privacy Policy</span>
+            <span class="f-link mt-8">Terms & Conditions</span>
+          </div>
+          <div class="footer-col c4">
+            <span class="f-link">Contact Us</span>
+          </div>  -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+
+

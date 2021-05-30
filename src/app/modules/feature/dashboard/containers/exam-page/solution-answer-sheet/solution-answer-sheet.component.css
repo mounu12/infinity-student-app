@@ -1,0 +1,42 @@
+.incorrect-answer-btn{
+    background: #FFB3B3;
+
+border: 1px solid #FFB3B3;
+}
+.correct-answer-btn {
+    background: #82ECC8;
+}
+.not-answered-btn {
+    background: #FFFFFF;
+
+border: 1px solid #B8C2CC;
+}
+.legend{
+    font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+color: #1E2A36;
+
+margin: 16px 0px;
+}
+.legend-item{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+.legend-icon{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+.legend-icon.correct {
+    background: #82ECC8;
+}
+.legend-icon.incorrect {
+    background: #FFB3B3;
+}
+.legend-icon.unattempted {
+    background: #FFFFFF;
+    border: 1px solid #B8C2CC;
+}

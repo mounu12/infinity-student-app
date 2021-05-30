@@ -1,0 +1,1044 @@
+[
+    {
+       "subjectId":2745,
+       "subjectname":"BOTANY",
+       "questions":[
+          {
+             "subject":2745,
+             "subjectname":"BOTANY",
+             "questionid":709760,
+             "questiontext":"The M phase of cell cycle ends  with cytokinesis",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+              "chapter":"",
+               "topic":"",
+              "subtopic":"",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"BOTANY/GENETICS AND EVOLUTION/Biomolecules/Inorganic substances",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709760/1.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588047907000,
+             "updatedon":1588047908000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347420,
+                   "choicetext":"    Always  ",
+                   "isselected":true,
+                   "correctanswer":3347421
+                },
+                {
+                   "choiceid":3347421,
+                   "choicetext":"    Usually  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347422,
+                   "choicetext":"    Rarely  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347423,
+                   "choicetext":"    Never  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":3347421,
+             "solution":"    Karyokinesis sometimes may not be followed by cytokinesis  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347420
+             ],
+            "avgtimeperquestion":" 20"
+          },
+          {
+             "questionid":709761,
+             "questiontext":"The shortest and the longest  phases of interphase respectively are",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"BOTANY/GENETICS AND EVOLUTION/Biomolecules/Inorganic substances",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709761/2.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588047940000,
+             "updatedon":1588047940000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347424,
+                   "choicetext":"    <math><mrow><msub><mtext>G</mtext><mtext>1</mtext></msub><msub><mrow><mtext>and G</mtext></mrow><mtext>2</mtext></msub><mtext> </mtext></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347425,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>S and G</mtext></mrow><mtext>2</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347426,
+                   "choicetext":"    <math><mrow><msub><mtext>G</mtext><mtext>2</mtext></msub><msub><mrow><mtext>and G</mtext></mrow><mtext>1</mtext></msub></mrow></math>  ",
+                   "isselected":true,
+                   "correctanswer":3347426
+                },
+                {
+                   "choiceid":3347427,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>S and G</mtext></mrow><mtext>1</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":3347426,
+             "solution":"    According to NCERT <math><mrow><msub><mtext>G</mtext><mtext>2</mtext></msub><msub><mrow><mtext>and G</mtext></mrow><mtext>1</mtext></msub></mrow></math> phases  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"Y",
+             "selectedanswer":[
+                3347426
+             ]
+          },
+          {
+             "questionid":709762,
+             "questiontext":"How many kingdoms of whittaker includes the organisms with both cell wall and  nuclear mombrane?",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"BOTANY/GENETICS AND EVOLUTION/Biomolecules/Inorganic substances",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709762/3.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588047981000,
+             "updatedon":1588047981000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347428,
+                   "choicetext":"    4  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347429,
+                   "choicetext":"    3  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347430,
+                   "choicetext":"    2  ",
+                   "isselected":true,
+                   "correctanswer":3347429
+                },
+                {
+                   "choiceid":3347431,
+                   "choicetext":"    5  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":3347429,
+             "solution":"    Protista, fungi and plantae  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347430
+             ]
+          },
+          {
+             "questionid":709764,
+             "questiontext":"Photoheterotrophic bacteria are",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"BOTANY/GENETICS AND EVOLUTION/Biomolecules/Inorganic substances",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709764/4.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588048018000,
+             "updatedon":1588048019000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347436,
+                   "choicetext":"    Archaebacteria  ",
+                   "isselected":true,
+                   "correctanswer":3347438
+                },
+                {
+                   "choiceid":3347437,
+                   "choicetext":"    Actinomycetes  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347438,
+                   "choicetext":"    Eubacteria  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347439,
+                   "choicetext":"    Mycoplasmas  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":3347438,
+             "solution":"    Purple non sulphur  bacteria are eubacteria  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347436
+             ]
+          },
+          {
+             "questionid":709766,
+             "questiontext":"The root that directly  elongates from radicle is",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"BOTANY/GENETICS AND EVOLUTION/Biomolecules/Inorganic substances",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709766/5.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588048067000,
+             "updatedon":1588048067000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347444,
+                   "choicetext":"    Primary root  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347445,
+                   "choicetext":"    Secondary root  ",
+                   "isselected":true,
+                   "correctanswer":3347444
+                },
+                {
+                   "choiceid":3347446,
+                   "choicetext":"    Tertiary root  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347447,
+                   "choicetext":"    Adventitious root  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":3347444,
+             "solution":"    Radicle elongates directly into  primary root  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347445
+             ]
+          }
+       ]
+    },
+    {
+       "subjectId":2747,
+       "subjectname":"ZOOLOGY",
+       "questions":[
+          {
+             "subject":2747,
+             "subjectname":"ZOOLOGY",
+             "questionid":709724,
+             "questiontext":"Column A,B, and C given below  respectively represent organism, locomotory  structures and their role or help. Find out the mismatch  <table>   <tr>    <td>    <p></p>    </td>    <td>    <p>A</p>    </td>    <td>    <p>B</p>    </td>    <td>    <p>C</p>    </td>   </tr>   <tr>    <td>    <p>1)</p>    </td>    <td>    <p>Paramoecium</p>    </td>    <td>    <p>Cilia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>   <tr>    <td>    <p>2)</p>    </td>    <td>    <p>Hydra</p>    </td>    <td>    <p>Tentacles</p>    </td>    <td>    <p>Food capture only</p>    </td>   </tr>   <tr>    <td>    <p>3)</p>    </td>    <td>    <p>Euglena</p>    </td>    <td>    <p>Flagella</p>    </td>    <td>    <p>Locomotion only</p>    </td>   </tr>   <tr>    <td>    <p>4)</p>    </td>    <td>    <p>Amoeba</p>    </td>    <td>    <p>Pseudopodia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>  </table>  <p></p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709824/46.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049707000,
+             "updatedon":1588049707000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347700,
+                   "choicetext":"    1  ",
+                   "isselected":true,
+                   "correctanswer":2
+                },
+                {
+                   "choiceid":3347701,
+                   "choicetext":"    2  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347702,
+                   "choicetext":"    3  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347703,
+                   "choicetext":"    4  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":2,
+             "solution":"    Tentacles help in locomotion  and food collection  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347700
+             ]
+          },
+          {
+             "questionid":709824,
+             "questiontext":"Column A,B, and C given below  respectively represent organism, locomotory  structures and their role or help. Find out the mismatch  <table>   <tr>    <td>    <p></p>    </td>    <td>    <p>A</p>    </td>    <td>    <p>B</p>    </td>    <td>    <p>C</p>    </td>   </tr>   <tr>    <td>    <p>1)</p>    </td>    <td>    <p>Paramoecium</p>    </td>    <td>    <p>Cilia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>   <tr>    <td>    <p>2)</p>    </td>    <td>    <p>Hydra</p>    </td>    <td>    <p>Tentacles</p>    </td>    <td>    <p>Food capture only</p>    </td>   </tr>   <tr>    <td>    <p>3)</p>    </td>    <td>    <p>Euglena</p>    </td>    <td>    <p>Flagella</p>    </td>    <td>    <p>Locomotion only</p>    </td>   </tr>   <tr>    <td>    <p>4)</p>    </td>    <td>    <p>Amoeba</p>    </td>    <td>    <p>Pseudopodia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>  </table>  <p></p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709824/46.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049707000,
+             "updatedon":1588049707000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347700,
+                   "choicetext":"    1  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347701,
+                   "choicetext":"    2  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347702,
+                   "choicetext":"    3  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347703,
+                   "choicetext":"    4  ",
+                   "isselected":true,
+                   "correctanswer":2
+                }
+             ],
+             "questionanswer":2,
+             "solution":"    Tentacles help in locomotion  and food collection  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347703
+             ]
+          },
+          {
+             "questionid":709825,
+             "questiontext":"About 40-50 percent of the  human body weight is contributed by muscles. Which one of the following is  not the criteria for their classification?",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709825/47.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049732000,
+             "updatedon":1588049733000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347704,
+                   "choicetext":"    Nature of regulation  "
+                },
+                {
+                   "choiceid":3347705,
+                   "choicetext":"    Appearance  "
+                },
+                {
+                   "choiceid":3347706,
+                   "choicetext":"    Location  "
+                },
+                {
+                   "choiceid":3347707,
+                   "choicetext":"    Strength of contraction  "
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Strength of contraction is not  uniform in all muscles  ",
+             "hints":[
+                
+             ]
+          },
+          {
+             "questionid":709827,
+             "questiontext":"Which of the following  represent one and the same",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709827/48.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049761000,
+             "updatedon":1588049761000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347712,
+                   "choicetext":"    Fascicles and fascia  "
+                },
+                {
+                   "choiceid":3347713,
+                   "choicetext":"    Sarcosomes and ribosomes  "
+                },
+                {
+                   "choiceid":3347714,
+                   "choicetext":"    Myofibrils and myofilaments  "
+                },
+                {
+                   "choiceid":3347715,
+                   "choicetext":"    Syncitium and sarcoplasm  "
+                }
+             ],
+             "questionanswer":3,
+             "solution":"    Multinucleated sarcoplasm is synsitium  ",
+             "hints":[
+                
+             ]
+          },
+          {
+             "questionid":709828,
+             "questiontext":"Following are the statements  above the anatomy of skeletal muscle fibre (showing  sarcomere). Identify the correct.  <p>A) Only thin filaments are  present in I - band              </p>  <p>B) Only thick filaments are  present in A- band </p>  <p>C) M – line is thin and fibrous</p>  <p>D) Z – line is elastic</p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709828/49.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049796000,
+             "updatedon":1588049796000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347716,
+                   "choicetext":"    All are correct  "
+                },
+                {
+                   "choiceid":3347717,
+                   "choicetext":"    Only A, B and C  "
+                },
+                {
+                   "choiceid":3347718,
+                   "choicetext":"    Only A, B and D  "
+                },
+                {
+                   "choiceid":3347719,
+                   "choicetext":"    Only A, C and D  "
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Margins of A-band has both  thick and thin filaments  ",
+             "hints":[
+                
+             ]
+          }
+       ]
+    },
+    {
+       "subjectId":2747,
+       "subjectname":"ZOOLOGY",
+       "questions":[
+          {
+             "subject":2747,
+             "subjectname":"ZOOLOGY",
+             "questionid":709724,
+             "questiontext":"Column A,B, and C given below  respectively represent organism, locomotory  structures and their role or help. Find out the mismatch  <table>   <tr>    <td>    <p></p>    </td>    <td>    <p>A</p>    </td>    <td>    <p>B</p>    </td>    <td>    <p>C</p>    </td>   </tr>   <tr>    <td>    <p>1)</p>    </td>    <td>    <p>Paramoecium</p>    </td>    <td>    <p>Cilia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>   <tr>    <td>    <p>2)</p>    </td>    <td>    <p>Hydra</p>    </td>    <td>    <p>Tentacles</p>    </td>    <td>    <p>Food capture only</p>    </td>   </tr>   <tr>    <td>    <p>3)</p>    </td>    <td>    <p>Euglena</p>    </td>    <td>    <p>Flagella</p>    </td>    <td>    <p>Locomotion only</p>    </td>   </tr>   <tr>    <td>    <p>4)</p>    </td>    <td>    <p>Amoeba</p>    </td>    <td>    <p>Pseudopodia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>  </table>  <p></p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709824/46.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049707000,
+             "updatedon":1588049707000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347700,
+                   "choicetext":"    1  ",
+                   "isselected":true,
+                   "correctanswer":2
+                },
+                {
+                   "choiceid":3347701,
+                   "choicetext":"    2  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347702,
+                   "choicetext":"    3  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347703,
+                   "choicetext":"    4  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":2,
+             "solution":"    Tentacles help in locomotion  and food collection  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347700
+             ]
+          },
+          {
+             "questionid":709824,
+             "questiontext":"Column A,B, and C given below  respectively represent organism, locomotory  structures and their role or help. Find out the mismatch  <table>   <tr>    <td>    <p></p>    </td>    <td>    <p>A</p>    </td>    <td>    <p>B</p>    </td>    <td>    <p>C</p>    </td>   </tr>   <tr>    <td>    <p>1)</p>    </td>    <td>    <p>Paramoecium</p>    </td>    <td>    <p>Cilia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>   <tr>    <td>    <p>2)</p>    </td>    <td>    <p>Hydra</p>    </td>    <td>    <p>Tentacles</p>    </td>    <td>    <p>Food capture only</p>    </td>   </tr>   <tr>    <td>    <p>3)</p>    </td>    <td>    <p>Euglena</p>    </td>    <td>    <p>Flagella</p>    </td>    <td>    <p>Locomotion only</p>    </td>   </tr>   <tr>    <td>    <p>4)</p>    </td>    <td>    <p>Amoeba</p>    </td>    <td>    <p>Pseudopodia</p>    </td>    <td>    <p>Locomotion and  food ingestion</p>    </td>   </tr>  </table>  <p></p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709824/46.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049707000,
+             "updatedon":1588049707000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347700,
+                   "choicetext":"    1  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347701,
+                   "choicetext":"    2  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347702,
+                   "choicetext":"    3  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3347703,
+                   "choicetext":"    4  ",
+                   "isselected":true,
+                   "correctanswer":2
+                }
+             ],
+             "questionanswer":2,
+             "solution":"    Tentacles help in locomotion  and food collection  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3347703
+             ]
+          },
+          {
+             "questionid":709825,
+             "questiontext":"About 40-50 percent of the  human body weight is contributed by muscles. Which one of the following is  not the criteria for their classification?",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709825/47.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049732000,
+             "updatedon":1588049733000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347704,
+                   "choicetext":"    Nature of regulation  "
+                },
+                {
+                   "choiceid":3347705,
+                   "choicetext":"    Appearance  "
+                },
+                {
+                   "choiceid":3347706,
+                   "choicetext":"    Location  "
+                },
+                {
+                   "choiceid":3347707,
+                   "choicetext":"    Strength of contraction  "
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Strength of contraction is not  uniform in all muscles  ",
+             "hints":[
+                
+             ]
+          },
+          {
+             "questionid":709827,
+             "questiontext":"Which of the following  represent one and the same",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709827/48.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049761000,
+             "updatedon":1588049761000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347712,
+                   "choicetext":"    Fascicles and fascia  "
+                },
+                {
+                   "choiceid":3347713,
+                   "choicetext":"    Sarcosomes and ribosomes  "
+                },
+                {
+                   "choiceid":3347714,
+                   "choicetext":"    Myofibrils and myofilaments  "
+                },
+                {
+                   "choiceid":3347715,
+                   "choicetext":"    Syncitium and sarcoplasm  "
+                }
+             ],
+             "questionanswer":3,
+             "solution":"    Multinucleated sarcoplasm is synsitium  ",
+             "hints":[
+                
+             ]
+          },
+          {
+             "questionid":709828,
+             "questiontext":"Following are the statements  above the anatomy of skeletal muscle fibre (showing  sarcomere). Identify the correct.  <p>A) Only thin filaments are  present in I - band              </p>  <p>B) Only thick filaments are  present in A- band </p>  <p>C) M – line is thin and fibrous</p>  <p>D) Z – line is elastic</p>",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"ZOOLOGY/DIVERSITY IN THE LIVING WORLD/ Animal Kingdom (Non chordates)/Notochord",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709828/49.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588049796000,
+             "updatedon":1588049796000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3347716,
+                   "choicetext":"    All are correct  "
+                },
+                {
+                   "choiceid":3347717,
+                   "choicetext":"    Only A, B and C  "
+                },
+                {
+                   "choiceid":3347718,
+                   "choicetext":"    Only A, B and D  "
+                },
+                {
+                   "choiceid":3347719,
+                   "choicetext":"    Only A, C and D  "
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Margins of A-band has both  thick and thin filaments  ",
+             "hints":[
+                
+             ]
+          }
+       ]
+    },
+    {
+       "subjectId":1125,
+       "subjectname":"CHEMISTRY",
+       "questions":[
+          {
+             "subject":1125,
+             "subjectname":"CHEMISTRY",
+             "questionid":709946,
+             "questiontext":"If <math><mrow><msub><mrow><mtext>Cl</mtext></mrow><mtext>2</mtext></msub></mrow></math>is passed through hot aqueous<math><mrow><mtext>NaOH</mtext></mrow></math>, the products formed have Cl in  different oxidation states. These are indicated as :",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"CHEMISTRY/Organic Chemistry/Alcohols or Alkanols(Phenols)/Miscellaneous",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709946/136.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588053080000,
+             "updatedon":1588053081000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3348192,
+                   "choicetext":"    -1 and +1  ",
+                   "isselected":true,
+                   "correctanswer":2
+                },
+                {
+                   "choiceid":3348193,
+                   "choicetext":"    -1 and +5  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348194,
+                   "choicetext":"    +1 and +5  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348195,
+                   "choicetext":"    -1 and +3  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":2,
+             "solution":"    <math><mrow><mo>[</mo><mn>3</mn><mi>C</mi><msub><mi>l</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mi>N</mi><mi>a</mi><mover><mrow><mi>C</mi><mi>I</mi></mrow><mrow><mo>+</mo><mn>5</mn></mrow></mover><msub><mi>O</mi><mn>3</mn></msub><mo>+</mo><mn>5</mn><mi>N</mi><mi>a</mi><mover><mrow><mi>C</mi><mi>I</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></mover><mo>+</mo><mn>3</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>]</mo></mrow></math>  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3348192
+             ]
+          },
+          {
+             "questionid":709948,
+             "questiontext":"Among the following oxoacids, the correct decreasing order of acid strength  is",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"CHEMISTRY/Organic Chemistry/Alcohols or Alkanols(Phenols)/Miscellaneous",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709948/137.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588053108000,
+             "updatedon":1588053109000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3348200,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>HClO</mtext></mrow><mtext>2</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>4</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>3</mtext></msub><mtext>&gt;HOCl</mtext></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348201,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>HOCl &gt; HClO</mtext></mrow><mtext>2</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>3</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>4</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348202,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>HClO</mtext></mrow><mtext>4</mtext></msub><msub><mrow><mtext>&gt;HOCl &gt; HClO</mtext></mrow><mtext>2</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>3</mtext></msub></mrow></math>  ",
+                   "isselected":true,
+                   "correctanswer":4
+                },
+                {
+                   "choiceid":3348203,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>HClO</mtext></mrow><mtext>4</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>3</mtext></msub><msub><mrow><mtext>&gt; HClO</mtext></mrow><mtext>2</mtext></msub><mtext>&gt; HOCl</mtext></mrow></math>  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Oxidation number <math><mi>α</mi></math>Acid strength  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3348202
+             ]
+          },
+          {
+             "questionid":709950,
+             "questiontext":"The interhalogen  having dimeric structure is",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"CHEMISTRY/Organic Chemistry/Alcohols or Alkanols(Phenols)/Miscellaneous",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709950/138.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588053136000,
+             "updatedon":1588053136000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3348208,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>CIF</mtext></mrow><mrow><mtext>3    </mtext></mrow></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348209,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>BrF</mtext></mrow><mtext>3</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348210,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>IF</mtext></mrow><mrow><mtext>3        </mtext></mrow></msub></mrow></math>  ",
+                   "isselected":true,
+                   "correctanswer":4
+                },
+                {
+                   "choiceid":3348211,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>ICl</mtext></mrow><mtext>3</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    <math><mrow><msub><mrow><mtext>ICl</mtext></mrow><mtext>3</mtext></msub></mrow></math> does not exist. The  dimer is a bright yellow solid.  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3348210
+             ]
+          },
+          {
+             "questionid":709952,
+             "questiontext":"Which one of the following  represents the reaction between fluorine and cold <math><mrow><mtext>NaOH</mtext></mrow></math>(dil)?",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"CHEMISTRY/Organic Chemistry/Alcohols or Alkanols(Phenols)/Miscellaneous",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709952/139.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588053163000,
+             "updatedon":1588053163000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3348216,
+                   "choicetext":"    <math><mrow><mn>2</mn><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>4</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mn>4</mn><mi>N</mi><mi>a</mi><mi>F</mi><mo>+</mo><mn>2</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi><mo>+</mo><msub><mi>O</mi><mn>2</mn></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348217,
+                   "choicetext":"    <math><mrow><mn>3</mn><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mn>5</mn><mi>N</mi><mi>a</mi><mi>F</mi><mo>+</mo><mi>N</mi><mi>a</mi><mi>F</mi><msub><mi>O</mi><mn>3</mn></msub><mo>+</mo><mn>3</mn><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348218,
+                   "choicetext":"    <math><mrow><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mi>N</mi><mi>a</mi><mi>F</mi><mo>+</mo><mi>N</mi><mi>a</mi><mi>O</mi><mi>F</mi><mo>+</mo><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348219,
+                   "choicetext":"    <math><mrow><mn>2</mn><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mn>2</mn><mi>N</mi><mi>a</mi><mi>F</mi><mo>+</mo><mi>O</mi><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></math>  ",
+                   "isselected":true,
+                   "correctanswer":4
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    <math><mrow><mn>2</mn><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><mi>N</mi><mi>a</mi><mi>O</mi><mi>H</mi><mo>→</mo><mn>2</mn><mi>N</mi><mi>a</mi><mi>F</mi><mo>+</mo><mi>O</mi><msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow></math>  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3348219
+             ]
+          },
+          {
+             "questionid":709954,
+             "questiontext":"Which of the following interhalogen compounds is not possible",
+             "questiontype":"Straight Objective",
+             "difficultlevel":"NEET_L1",
+             "objective":"Formula Based",
+             "taxanomy":null,
+             "conceptlevel":null,
+             "syllabus":"CHEMISTRY/Organic Chemistry/Alcohols or Alkanols(Phenols)/Miscellaneous",
+             "referencebook":"INTERNAL PAPER",
+             "elaboration":null,
+             "previousquestion":null,
+             "referenceid":null,
+             "studyclass":"INTER",
+             "docpath":"709954/140.doc",
+             "keywords":"SR ELITE UNIT TEST-6 (30-4-2020)",
+             "createdon":1588053191000,
+             "updatedon":1588053191000,
+             "questionstatus":"Approved",
+             "choicesperline":1,
+             "questionchoices":[
+                {
+                   "choiceid":3348224,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>IF</mtext></mrow><mtext>7</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348225,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>IF</mtext></mrow><mtext>5</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                },
+                {
+                   "choiceid":3348226,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>ClF</mtext></mrow><mtext>3</mtext></msub></mrow></math>  ",
+                   "isselected":true,
+                   "correctanswer":4
+                },
+                {
+                   "choiceid":3348227,
+                   "choicetext":"    <math><mrow><msub><mrow><mtext>FCl</mtext></mrow><mtext>3</mtext></msub></mrow></math>  ",
+                   "isselected":false
+                }
+             ],
+             "questionanswer":4,
+             "solution":"    Lesser EN is the central atom  in interhalogen compound.  ",
+             "hints":[
+                
+             ],
+             "iscorrectanswer":"N",
+             "selectedanswer":[
+                3348226
+             ]
+          }
+       ]
+    }
+ ]

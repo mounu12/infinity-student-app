@@ -1,0 +1,38 @@
+[
+    {
+       "id":"6068825fa83b572bac3b210e",
+       "rulename":"PRACTICE TEST1",
+       "scheduleid":"60682c9fa83b572bac3b1be3",
+       "userId":null,
+       "examrules":"[{\"subjectid\":\"60558e90a83b5767dd0343b1\",\"subjectname\":\"CHEMISTRY  XI\",\"totalquestions\":\"19\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"level\":\"0\",\"parent\":\"NA\",\"value\":\"\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"19\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"NA\",\"objectivein\":\"NA\",\"difficultylevelin\":\"NA\",\"taxanomyin\":\"NA\",\"chapterin\":\"NA\",\"topicin\":\"NA\",\"subtopicin\":\"NA\"},{\"subjectid\":\"60558e99a83b5767dd0343b2\",\"subjectname\":\"CHEMISTRY  XII\",\"totalquestions\":\"26\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"26\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"},{\"subjectid\":\"6055c7d4a83b5767dd0343dd\",\"subjectname\":\"PHYSICS XI\",\"totalquestions\":\"45\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"45\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"},{\"subjectid\":\"605ad0dfa83b572974f89e07\",\"subjectname\":\"BOTANY XI\",\"totalquestions\":\"27\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"27\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"},{\"subjectid\":\"605ad0e8a83b572974f89e08\",\"subjectname\":\"BOTANY XII\",\"totalquestions\":\"18\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"18\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"},{\"subjectid\":\"6052ebeaa83b57668d146894\",\"subjectname\":\"ZOOLOGY XI\",\"totalquestions\":\"20\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"20\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"},{\"subjectid\":\"6052fed2a83b5767dd034366\",\"subjectname\":\"ZOOLOGY XII\",\"totalquestions\":\"21\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"value\":\"\",\"level\":\"0\",\"parent\":\"NA\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"21\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"\",\"objectivein\":\"\",\"difficultylevelin\":\"\",\"taxanomyin\":\"\",\"chapterin\":\"\",\"topicin\":\"\",\"subtopicin\":\"\"}]",
+       "status":"UNDERREVIEW",
+       "schedulename":"NEET PRACTICE TEST",
+       "description":"PRACTICE TEST1",
+       "duration":"90",
+       "examtime":null,
+       "examtype":"MOCKTEST",
+       "span":null,
+       "totalquestions":"176",
+       "questions":null,
+       "coursetype":"NEET",
+       "testtype":"TEST1"
+    },
+    {
+       "id":"6068a578a83b572bac3b2116",
+       "rulename":"1",
+       "scheduleid":"6068a524a83b572bac3b2115",
+       "userId":"60671d31a83b574dd69d048a",
+       "examrules":"[{\"subjectid\":\"6055c7d4a83b5767dd0343dd\",\"subjectname\":\"PHYSICS XI\",\"totalquestions\":\"10\",\"rules\":[{\"code\":\"\",\"name\":\"Chapter (0)\",\"level\":\"0\",\"parent\":\"NA\",\"value\":\"\",\"children\":[]}],\"commonrules\":[{\"questiontype\":[{\"code\":\"1029|Straight MCQ\",\"value\":\"20\"}],\"objective\":[],\"difficultylevel\":[],\"taxanomy\":[]}],\"questiontypein\":\"NA\",\"objectivein\":\"NA\",\"difficultylevelin\":\"NA\",\"taxanomyin\":\"NA\",\"chapterin\":\"NA\",\"topicin\":\"NA\",\"subtopicin\":\"NA\"}]",
+       "status":"CREATED",
+       "schedulename":"Test 1 (US)",
+       "description":"efnklwne",
+       "duration":"10",
+       "examtime":null,
+       "examtype":"PREVIOUSYEAR",
+       "span":null,
+       "totalquestions":"20",
+       "questions":null,
+       "coursetype":"NEET 2013",
+       "testtype":null
+    }
+ ]

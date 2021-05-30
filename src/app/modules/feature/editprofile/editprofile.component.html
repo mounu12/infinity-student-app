@@ -1,0 +1,200 @@
+<form name="userForm" [formGroup]="userForm">
+
+  <!-- My Profile Section Start -->
+  <div class="my-profile-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div class="my-profile-wrapper">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-between">
+                <h2 class="mb-0">My Profile</h2>
+              </div>
+            </div>
+
+            <!-- Student Info Start -->
+            <!-- <div class="student-info">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-start align-items-center">
+                  <figure>
+                    <img src="{{userForm?.value?.profilePhoto}}" onerror="this.src='../../../../assets/img/empty-profile.svg'"  alt="" />
+                  </figure>
+                  <div class="student-details">
+                    <input #fileInput type="file" (change)="uploadFile($event)" style="display:none;" />
+                    <button type="button" class="btn-link mr-3" (click)="fileInput.click()">
+                      <img src="../../../../assets/img/edit-icon.svg" alt="Edit">
+                    </button>
+                    <button type="button" class="btn-link" (click)="removeUploadedFile()"><img src="../../../../assets/img/delete-icon-2.svg" alt="Delete"></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="student-info">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-start align-items-center">
+                  <figure>
+                    <!-- <img [src]="profilePhoto" (error)="setDefaultPic()" alt="" height="60"> -->
+                    <img src="{{userForm?.value?.profilePhoto}}"
+                      onerror="this.src='../../../../assets/img/empty-profile.svg'" alt="" />
+                  </figure>
+                  <div class="student-details">
+                    <!-- <button type="button" class="btn-link mr-3" (click)="uploadPhoto()"><img src="../../../../assets/img/edit-icon.svg" alt="Edit"></button> -->
+                    <button type="button" class="btn-link mr-3" (click)="fileInput.click()">
+                      <img src="../../../../assets/img/edit-icon.svg" alt="Edit">
+                      <input #fileInput type="file"
+                        (change)="onFileChanged($event,'profileImage'); onUpload('profileImage')"
+                        style="display:none;" />
+                    </button>
+                    <button type="button" class="btn-link" [disabled]="!userForm?.value?.profilePhoto" (click)="confirmDeletePhoto()"><img
+                        src="../../../../assets/img/delete-icon-2.svg" alt="Delete"></button>
+                    <!-- [disabled]="!(userForm?.value?.profilePhoto && !profileImageUrl)" -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- <div class="group-gap">
+
+              <div class="avatar-upload">
+                <div class="avatar-edit">
+                  <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" style="display:none;"/>
+                </div>
+                <div class="avatar-preview">
+                  <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+              <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput.click()">Upload Image</button>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="removeUploadedFile()">Remove</button> -->
+            <!-- Student Info End -->
+
+
+            <!-- Academic Details Start -->
+            <div class="academic-details-section">
+              <div class="row">
+                <div class="col-12">
+                  <h5>Academic Details</h5>
+                  <div class="form-row">
+                    <div class="col-auto mb-3">
+                      <div class="academic-info">
+                        <div class="float-left">
+                          <h6><img class="icon-24" src="../../../../assets/img/grade-icon.svg" alt="Grade"> Grade</h6>
+                          <div class="academic-info-bottom">
+                            <p>{{userForm?.value?.grade?.gradeName?.replace('st', '')?.replace('nd', '')?.replace('rd',
+                              '')?.replace('th', '')}}</p>
+                          </div>
+                        </div>
+                        <div class="p-edit">
+                          <button data-toggle="modal" data-target="#gradeModal" type="button"
+                            (click)="editSelectedGrade()" class="btn-link pt-15" style="color: #0C9968;">EDIT</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-3">
+                      <div class="academic-info">
+                        <div class="float-left">
+                          <h6><img class="icon-24" src="../../../../assets/img/grade-icon.svg" alt="Grade"> BOARD</h6>
+                          <div class="academic-info-bottom">
+                            <p>{{userForm?.value?.board?.boardName?.replace('Board', '')}}</p>
+                          </div>
+                        </div>
+                        <div class="p-edit">
+                          <button data-toggle="modal" data-target="#boardModal" type="button"
+                            (click)="editSelectedBoard()" class="btn-link pt-15" style="color: #0C9968;">EDIT</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="mt-25">Target Exams</h5>
+                  <div class="form-row">
+                    <div class="col-12">
+                      <div class="academic-info">
+                        <h6 class="mb-4 pb-20"><img class="icon-24" src="../../../../assets/img/target-exam-icon.svg"
+                            alt="Grade"> Target
+                          Exams <button type="button" class="btn-link float-right" data-toggle="modal"
+                            (click)="editSelectedTargetExam()" data-target="#exitTargetExam"
+                            style="color: #0C9968;">EDIT</button> </h6>
+                        <div class="academic-info-bottom pl-0 p-7" *ngFor="let ex of userForm?.value?.targetexams">
+                          <p class="d-flex justify-content-between"><span>{{ex?.targetExam}}</span>
+                            <!-- <span>6/ 120 Tests Attempted</span>  -->
+                            <span>{{ex?.noOfTests}}</span>
+                          </p>
+                          <hr>
+                          <!-- <p class="d-flex justify-content-between"><span>IIT-JEE </span> <span>6/ 120 Tests
+                              Attempted </span> </p> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="mt-25">Personal Details</h5>
+                  <!-- <form [formGroup]="userForm"> -->
+                  <!-- <pre>{{userForm?.value|json}}</pre>  -->
+                  <div class="row personal-details-edit">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control name" formControlName="firstName">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label>Second Name</label>
+                        <input type="text" class="form-control name" formControlName="lastName">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control tel" formControlName="phoneNumber" readonly>
+                        <button type="button" class="pt-10 btn-link mb-0 mr-4" (click)="editPhoneNumber()">EDIT
+                          NUMBER</button>
+                        <!-- <mat-error class="error-msg" *ngIf="u.phoneNumber.touched && u.phoneNumber.errors?.pattern">
+                          Enter 10 digit mobile number
+                      </mat-error> -->
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="text" class="form-control email" formControlName="email">
+                        <mat-error class="error-msg" *ngIf="u.email.touched && u.email.errors?.pattern">
+                          Enter valid email
+                        </mat-error>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="margin-top: -24px;">
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control password" formControlName="password" readonly>
+                        <button type="button" style="color: #0C9968;" class="pt-10 btn-link mb-0 mr-4"
+                          (click)="editPassword()">Change Password</button>
+                      </div>
+                    </div>
+                    <!-- <div class="col-12 col-md-6">
+                      <button type="button" class="btn-link btn-change-pass">Change Password</button>
+                    </div> -->
+                  </div>
+                  <!-- </form> -->
+
+                  <div class="d-flex justify-content-end">
+                    <button type="button" style="color: #0C9968;" class="btn btn-link mb-0 mr-4"
+                      (click)="showMyProfile()">Cancel</button>
+                    <button type="button" class="btn btn-primary" (click)="updateUser()">SAVE DETAILS</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Academic Details End -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- My Profile Section End -->
+</form>

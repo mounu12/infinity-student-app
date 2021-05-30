@@ -1,0 +1,63 @@
+<button type="button" class="btn-toggle-hide" (click)="showhidedivHide()"></button> 
+<div class="exam-right-info" *ngIf ="showdiv">
+    <button type="button" class="btn-toggle" (click)="showhidediv()"></button> 
+    <h4>{{selectedQuestions && selectedQuestions.subjectname}} ({{selectedQuestions && (selectedQuestions.questions.length)}})</h4>
+    <div #questionPointerHolder class="question-no bbbb" *ngIf="selectedQuestions && selectedQuestions.questions.length > 0">
+      <!-- <ng-container *ngFor="let sq of selectedQuestions.questions;let i = index ">
+        <button class="btn " *ngIf="!sq.ismarkedforreview" [ngClass]=" sq.isvisited ? (sq.iscorrectanswer ? 'btn-answered' : 'btn-not-answered') : (sq.iscorrectanswer ? 'btn-answered' : 'btn-not-visited')" (click)="showSelectedQuestion(i)">{{i + 1}}</button>
+        <ng-container *ngIf="sq.ismarkedforreview">
+        <button class="btn btn-not-answer-mark-review" *ngIf="sq.iscorrectanswer" >{{i + 1}} <span class="marked-review-icon"><img src="assets/img/marked-review-icon.svg" alt=""></span></button>
+        <button class="btn btn-answer-mark-review" *ngIf="!sq.iscorrectanswer" >{{i + 1}} </button>
+        </ng-container>
+      </ng-container> -->
+      <ng-container *ngFor="let sq of selectedQuestions.questions;let i = index ">
+        <!-- <button class="btn " *ngIf="!sq.ismarkedforreview" [ngClass]=" sq.isvisited ? (sq.iscorrectanswer ? 'btn-answered' : 'btn-not-answered') : (sq.iscorrectanswer ? 'btn-answered' : 'btn-not-visited')" (click)="showSelectedQuestion(i)">{{i + 1}}</button> -->
+        
+        <ng-container *ngIf="!sq.ismarkedforreview && sq.answer_given">
+          <button class="btn btn-answered"
+            (click)="showSelectedQuestion(i)">{{(i + 1) + addNumberToCounterForDisplayNumber}}</button>
+        </ng-container>
+        <ng-container *ngIf="!sq.ismarkedforreview && !sq.answer_given">
+          <button class="btn" [ngClass]="sq.isvisited?'btn-not-answered':'btn-not-visited'" (click)="showSelectedQuestion(i)">
+            {{(i + 1)+addNumberToCounterForDisplayNumber}}
+          </button>
+        </ng-container>
+        
+        <ng-container *ngIf="sq.ismarkedforreview">
+        <button *ngIf="!sq.answer_given" class="btn btn-not-answer-mark-review" (click)="showSelectedQuestion(i)"  >{{(i + 1)+addNumberToCounterForDisplayNumber}} </button>
+        <button *ngIf="sq.answer_given" class="btn btn-answer-mark-review" (click)="showSelectedQuestion(i)"  >{{(i + 1)+addNumberToCounterForDisplayNumber}} <span class="marked-review-icon"><img src="assets/img/marked-review-icon.svg" alt=""></span></button>
+        </ng-container>
+      </ng-container>
+
+      <!-- <button class="btn btn-success">1</button> 
+      <button class="btn btn-success">2</button>
+      <button class="btn btn-success">3</button>
+      <button class="btn btn-success">4</button>
+      <button class="btn btn-outline-secondary">5</button>
+      <button class="btn btn-outline-secondary">6</button>
+      <button class="btn btn-warning">7</button>
+      <button class="btn btn-not-answer">8 </button>
+      <button class="btn btn-outline-secondary">9</button>
+      <button class="btn btn-outline-secondary">10</button>
+      <button class="btn btn-outline-secondary">11</button>
+      <button class="btn btn-outline-secondary">12</button>
+      <button class="btn btn-outline-secondary">13</button>
+      <button class="btn btn-outline-secondary">14</button>
+      <button class="btn btn-not-answer">15 <span class="marked-review-icon"><img src="assets/img/marked-review-icon.svg" alt=""></span></button>
+      <button class="btn btn-outline-secondary">16</button>
+      <button class="btn btn-outline-secondary">17</button>
+      <button class="btn btn-outline-secondary">18</button>
+      <button class="btn btn-outline-secondary">19</button>
+      <button class="btn btn-outline-secondary">20</button> -->
+    </div>
+    <div class="legend-box">
+      <h4>Legend</h4>
+      <ul>
+        <li><img src="assets/img/not-answer.svg" alt=""> <span>Not answered</span> </li>
+        <li><img src="assets/img/answer.svg" alt=""> <span>Answered</span> </li>
+        <li><img src="assets/img/not-visited.svg" alt=""> <span>Not Visited</span> </li>
+        <li><img src="assets/img/not-ans-without-mark.svg" alt=""> <span>Not Answered and Marked for Review</span> </li>
+        <li><img src="assets/img/ans-with-mark-review.svg" alt=""> <span>Answered and Marked for Review</span> </li>
+      </ul>
+    </div>
+  </div>

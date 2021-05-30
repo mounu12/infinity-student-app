@@ -1,0 +1,19 @@
+<div>
+    <h4>Are you sure you want to submit?</h4>
+    <p>You still have <strong>{{countdown}} hrs remaining</strong>. Do you still want to proceed?</p>
+    <div class="legend-box">
+        <ul>
+            <li><img src="assets/img/not-answer.svg" alt=""> Not answered <span class="result">{{notAnsweredCount}}</span> </li>
+            <li><img src="assets/img/answer.svg" alt=""> Answered <span class="result">{{answeredCount}}</span></li>
+            <li><img src="assets/img/not-visited.svg" alt=""> Not Visited <span class="result">{{notVisitedCount}}</span></li>
+            <li><img src="assets/img/not-ans-without-mark.svg" alt=""> Not Answered and Marked for Review <span
+                    class="result">{{notAnsweredMarkReviewCount}}</span></li>
+            <li><img src="assets/img/ans-with-mark-review.svg" alt=""> Answered and Marked for Review <span
+                    class="result">{{answeredMarkReviewCount}}</span> </li>
+        </ul>
+    </div>
+    <div class="mt-25">
+        <button class="btn btn-primary btn-block mb-0" type="button" (click)="backToTest()">Back to test</button>
+        <button class="btn-link btn-block mt-15 mb-0" type="button" (click)="finishTest()">Finish test</button>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+
+  <mat-dialog-content class="grades-dialog setup" style="overflow: hidden; scroll-behavior: unset;">
+        
+    <div class="step-container cursor-pointer mt-25" *ngIf="!data?.isGradeEdit" (click)="showStep1()">
+      <img src="assets/img/back-arrow-icon-dark.svg" class="back"><div class="step">STEP 2/4</div>
+    </div>
+    
+    <div class="msg-one mt-25" *ngIf="!data?.isGradeEdit">
+      {{ data?.message }}
+    </div>
+    <div class="info-div" *ngIf="!data?.isGradeEdit">
+      {{data?.message2}}
+    </div>
+
+    <!-- <div class="info-div" *ngIf="data?.isGradeEdit">
+      {{data?.message3}}
+    </div> -->
+    
+
+
+    <div class="text-02">What grade are you in?</div>
+        <div class="grades-box" *ngIf="!data?.isGradeEdit">
+            <div class="grade-box {{index === i || data?.boardsData?.id === gr.id ? 'selected': ''}}" (click)="saveIndex(i)" *ngFor="let gr of grades; index as i">
+              {{gr.gradeName}}
+            </div>
+        </div>
+        <div class="grades-box" *ngIf="data?.isGradeEdit">
+          <div class="grade-box {{index === i || data?.boardsData?.id === gr.id ? 'selected': ''}}" (click)="saveIndex(i)" *ngFor="let gr of grades; index as i">
+            {{gr.gradeName}}
+          </div>
+      </div>
+
+      <div class="submit-cont" *ngIf="!data?.isGradeEdit">
+        <!-- <div class="skip" (click)="onNoClick()">
+          CANCEL
+        </div> -->
+        <div class="submit-btn ml-0" (click)="grade()">
+            SAVE PREFERENCE
+        </div>
+      </div>
+
+      <div class="submit-cont" *ngIf="data?.isGradeEdit">
+        <div class="skip" (click)="onNoClick()">
+          CANCEL
+        </div>
+        <div class="submit-btn" (click)="onConfirmClick()">
+            SAVE PREFERENCE
+        </div>
+      </div>
+  </mat-dialog-content>

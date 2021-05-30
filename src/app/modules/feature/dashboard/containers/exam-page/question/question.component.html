@@ -1,0 +1,146 @@
+<div class="exam-wrapper">
+	<!-- Exam Left Pannel Start -->
+	<div class="exam-left">
+		<div class="row">
+			<div class="col-lg-6 col-xs-12">
+				
+				<!-- <button class="btn btn-primary mr-3" type="button">Physics</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Chemistry</button>
+          <button class="btn btn-outline-secondary mr-3" type="button">Biology</button> -->
+				<nz-tabset class="air-tabs" [nzSelectedIndex]="0">
+					<ng-container *ngFor="let top of topics">
+						<!-- <nz-tab nzTitle="{{top.name}}" (nzClick)="changetopics(top)"></nz-tab> -->
+						<button class="btn btn-outline-secondary mr-12" [ngClass]="defaulttopic === top.name ? 'active' : ''" (click)="changetopics(top)"
+							type="button">{{top.name}}</button>
+					</ng-container>
+
+				</nz-tabset>
+			</div>
+			<div class="col-lg-6 col-xs-12 d-flex justify-content-end question-btn">
+				<button (click)="swipePrevious()" [disabled]="previousButtonDisable"  type="button" class="btn-icon mr-10"><img src="assets/img/prev-icon-dark.svg" alt=""></button>
+				<button (click)="swipeNext()" [disabled]="nextButtonDisable"  type="button" class="btn-icon"><img src="assets/img/next-icon-dark.svg" alt=""></button>
+			</div>
+		</div>
+		<div class="exam-question">
+
+
+			<!-- <h2>{{'question' | translate}}  {{showcounter+1}} / {{exam.totalquestions}}</h2> -->
+
+			<div class="exam-question-top">
+				<div class="question">
+					<span class="question-no">
+						Q {{(questioncounter + 1)+addNumberToCounterForDisplayNumber}}.
+					</span>
+					<div class="question-content">
+						<!-- <div class="pb-5" [innerHTML]="question.questiontext | safe "></div> -->
+						<div class="pb-5" [appMath]="question?.questiontext"></div>
+						
+						<!-- <ul class="option-list">
+							<li *ngFor="let qc of questionchoices;index as i"> -->
+
+						<ul class="option-list">
+							<li class="option" *ngFor="let qc of questionchoices;index as i">	
+								<div class="custom-control custom-radio pl-5" *ngIf="qc.isselected">
+									<input type="radio" checked id="click{{i+1}}"
+										(click)="getquestionIndex(qc.choiceid,$event)">
+									<!-- <label class="pl-10" id="{{i+1}}" [innerHTML]="qc.choicetext | safe"></label> -->
+									<label class="pl-10" id="{{i+1}}" [appMath]="qc.choicetext"></label>
+								</div>
+								<!-- <div class="custom-control custom-radio" *ngIf="qc.isselected">
+									<input type="radio" id="click{{i+1}}" (click)="getquestionIndex(qc.choiceid,$event)" class="custom-control-input">
+									<label class="custom-control-label" for="click{{i+1}}" [innerHTML]="qc.choicetext "></label>
+								</div> -->
+								<div class="custom-control custom-radio pl-5" *ngIf="!qc.isselected">
+									<input type="radio" id="click{{i+1}}"
+										(click)="getquestionIndex(qc.choiceid,$event)">
+									<!-- <label class="pl-10" id="{{i+1}}" [innerHTML]="qc.choicetext | safe"> </label> -->
+									<label class="pl-10" id="{{i+1}}" [appMath]="qc.choicetext"> </label>
+								</div>
+							</li>
+
+							<li class="option" *ngIf="questionchoices.length==0">
+								<h3>
+
+									<!--<input value="{{numericvalue}}"
+									 (input)='getnumericQuestions($event.target.value)'type="text"></input>-->
+
+								</h3>
+
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="exam-question-bottom">
+				<div class="row h-100">
+					<div class="col-12 d-flex justify-content-between align-items-center">
+						<div>
+							<button class="btn btn-mark-review mr-15" [disabled]="nextButtonDisable" (click)="markForReviewAndNext()">MARK FOR REVIEW &amp;
+								NEXT</button>
+							<button class="btn btn-clear-response" (click)="clearResponse()">CLEAR RESPONSE</button>
+							<div class="save-btn">
+								<button type="button" [disabled]="nextButtonDisable" class="btn btn-primary"
+									(click)="swipeNext()">
+									SAVE AND NEXT
+								</button>
+							</div>
+						</div>
+
+						<nz-form-item>
+							<nz-form-control class="text-right">
+								<!-- <button type="button" class="btn btn-outline-secondary" (click)="swipePrevious()">
+									PREVIOUS
+								</button> -->
+								
+								<!-- <button type="button" [disabled]="!noquestions" class="btn btn-primary"
+									(click)="swipeNext()" class="btn btn-primary">SAVE AND
+										NEXT</button> -->
+
+
+								<!-- <button type="button" *ngIf="role =='ROLE_TESTREV' || role =='ROLE_ADMIN' "
+										class="btn btn-secondary" (click)="publishexam('PENDINGAPPROVAL')">
+										APPROVAL
+									</button>
+		
+									<button type="button" *ngIf="role =='ROLE_TESTAPPROV'" class="btn btn-secondary"
+										(click)="publishexam('PUBLISHED')">
+										PUBLISH
+									</button> -->
+							</nz-form-control>
+						</nz-form-item>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Exam Left Pannel End -->
+
+	<!-- Exam Right Pannel Start -->
+	<app-answer-sheet [addNumberToCounterForDisplayNumber]="addNumberToCounterForDisplayNumber" [selectedQuestions]="selectedQuestions" [newselectionarray]="newselectionarray">
+	</app-answer-sheet>
+	<!-- Exam Right Pannel End -->
+</div>
+
+
+
+
+<!-- <div class="card">
+	<div class="card-header card-header-flex">
+		<div class="d-flex flex-column justify-content-center mr-auto">
+		  <h5 class="mb-0"> TEST 
+			  </h5>
+		</div>
+		<nz-tabset class="air-tabs" [nzSelectedIndex]="0">
+			<div *ngFor ="let top of topics" >
+		  <nz-tab nzTitle="{{top.name}}" (nzClick)="changetopics(top)"></nz-tab>
+		   </div>
+		  
+		</nz-tabset>
+	  </div>
+	  <div class="card-body">
+
+  
+
+</div> -->

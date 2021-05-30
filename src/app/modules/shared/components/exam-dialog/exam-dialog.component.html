@@ -1,0 +1,51 @@
+<mat-dialog-content class="exams-dialog setup">
+  <div class="step-container mt-25  " *ngIf="!data?.isExamEdit">
+    <img src="../../../../../assets/img/back-arrow-icon-dark.svg" class="back" (click)="showPrevStep()"><div class="step">STEP 4/4</div>
+  </div>
+
+  <div class="heading">
+    {{ data?.message }}
+  </div>
+  <div class="info-div">
+    {{data?.message2}}
+  </div>
+
+
+    <input type="text" class="form-control search" placeholder="Search board name" (keyup)="searchExams($event)">
+
+    <div class="exams-box pt-20">
+      <div class="exam-box {{selectedExams[i] ? 'selected': ''}}" *ngFor="let i of searchIndices" (click)="selectExam(i)">
+        
+          <img class="icon-24 mr-8 mid-img" [src]="exams[i]?.examsimage" alt="">
+
+          <div style="width: 158px; margin-right: auto;">
+            <div class="exam-name">
+              {{exams[i]?.targetExam}}
+            </div>
+            <div class="exam-desc">
+              {{exams[i]?.description}}
+            </div>
+          </div>
+          <img src="{{selectedExams[i] ? greenTickPath: greyTickPath}}" class="ml-auto mid-img" />
+      </div>
+    </div>
+
+  <div class="d-flex align-items-center justify-content-between mt-25" *ngIf="!data?.isExamEdit">
+      <div class="btn btn-primary" (click)="gotoDashboard()">
+          GET STARTED
+      </div>
+      <div class="skip" (click)="goToProfile()">
+          SKIP
+      </div>
+  </div>
+
+  <div class="submit-cont" *ngIf="data?.isExamEdit">
+    <div class="skip" (click)="onNoClick()">
+      CANCEL
+    </div>
+    <div class="submit-btn" (click)="onConfirmClick()">
+        SAVE PREFERENCE
+    </div>
+  </div>
+
+</mat-dialog-content>

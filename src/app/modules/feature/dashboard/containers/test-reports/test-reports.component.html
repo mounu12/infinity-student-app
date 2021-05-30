@@ -1,0 +1,155 @@
+
+
+<div class="exam-report-details-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <button type="button" class="m-btn-back m-show mb-25"><img src="assets/img/back-btn-dark-mob.svg" alt="Back"></button>
+          <button routerLink="/dashboard" type="button" class="btn btn-outline-secondary mb-15 m-hide"><img class="ml-0 mr-2" src="assets/img/back-arrow-icon-dark.svg" alt=""> GO BACK</button>
+        <h3>Detailed Report for PYPs and Mock Test</h3>
+      </div>
+    </div>
+
+    <div class="mock-test-info border-bottom-sm">
+      <div class="form-row">
+        <div class="col-6 col-md-3 border-right-sm-0 border-right mb-4">
+          <div class="mock-test-details pl-0 pl-md-4">
+            <p><img class="icon-18" src="assets/img/time-spend-icon.svg" alt="Tests Attempted"> Total Time Spent</p>
+            <p class="score"><span class="text-dark">{{report['avgtimespent']}}</span> </p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 border-right-sm-0 border-right mb-4">
+          <div class="mock-test-details pl-0 pl-md-4">
+            <p><img class="icon-18" src="assets/img/pyps-icon.svg" alt="Tests Attempted"> PYPs Attempted</p>
+            <p class="score"><span class="text-success">{{report['pypattempted']}}</span> / {{report['totalpyptests']}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 border-right-sm-0 border-right mb-4">
+          <div class="mock-test-details pl-0 pl-md-4 mb-4">
+            <p><img class="icon-18" src="assets/img/mock-tests-attempted-icon.svg" alt="Tests Attempted"> Mock Tests
+              Attempted</p>
+            <p class="score"><span class="text-success">{{report['mocktestsattempted']}}</span> /
+              {{report['totalmocktests']}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 ">
+          <div class="mock-test-details">
+            <p><img class="icon-18" src="assets/img/average-score-icon.svg" alt="Tests Attempted"> Average Score</p>
+            <p class="score"><span class="text-success">{{report['avgscore']}}</span> / 720</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Mock Test Report Chart Start -->
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <!-- <h4> Mock Test Report</h4> -->
+        <div class="dropdown btn-title-dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mock Test Report
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item text-center" (click)="selectReportType('Mock Tests')">Mock Tests</a>
+            <a class="dropdown-item text-center" (click)="selectReportType('Previous Year Papers')">Previous Year
+              Papers</a>
+          </div>
+        </div>
+        <h5 class="m-show m-performance-title">Your performance</h5>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="dropdown btn-overall-score mb-0">
+          <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="m-hide">OVERALL SCORE</span> <span class="d-inline-block m-show">SCORE</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item text-center" href="#">Time Taken</a>
+            <a class="dropdown-item text-center" href="#">Overall Score</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="report-chart-single-section border-bottom-sm mt-30">
+      <div class="row">
+        <div class="col-12">
+          <!-- <img src="assets/img/mock-test-report-chart.png" alt="" class="img-fluid"> -->
+          <div class="mb-25 text-center"><button class="btn btn-outline-secondary mr-15 m-hide" *ngFor="let filter of filters" [ngClass]="filter.id === selectedfilter ? 'active': ''" type="button">{{filter.name}}</button>
+
+            <div class="dropdown btn-overall-score m-show">
+                <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a *ngFor="let filter of filters" [ngClass]="filter.id === selectedfilter ? 'active': ''" class="dropdown-item text-center" href="javascript:void(0)">{{filter.name}}</a>
+                </div>
+              </div>
+          </div>
+          <app-bar-chart *ngIf="cumilativeChartData" [testsforchart] = "cumilativeChartData.chartDataList" [barChartLabels_]="cumilativeChartData.labels"></app-bar-chart>
+        </div>
+      </div>
+      <div class="mock-test-info">
+        <div class="row">
+          <div class="col-12 col-md-10 offset-md-1">
+            <div class="row">
+              <div class="col-6 col-md-4 mb-4">
+                <div class="mock-test-details pl-0 pl-lg-5">
+                  <p><img class="icon-18" src="assets/img/time-spend-icon.svg" alt="Tests Attempted"> Total Time Spent</p>
+                  <p class="score"><span class="text-dark"></span>{{report['favgtimespent']}} </p>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 mb-4">
+                <div class="mock-test-details pl-0 pl-lg-5">
+                  <p><img class="icon-18" src="assets/img/average-score-icon.svg" alt="Tests Attempted"> Average Score</p>
+                  <p class="score"><span class="text-success">{{report['favgscore']}}</span> / 720</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 mb-4">
+                <div class="mock-test-details pl-0 pl-lg-5">
+                  <p><img class="icon-18" src="assets/img/mock-tests-attempted-icon.svg" alt="Tests Attempted"> Mock Tests
+                    Attempted</p>
+                  <p class="score"><span class="text-success">{{report['fmocktestsattempted']}}</span> /
+                    {{report['ftotalmocktests']}}</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mock Test Report Chart End -->
+
+
+    <!-- Subject Report Details Start -->
+    <div class="subject-details-report">
+      <div class="row">
+        <div class="col-12 col-md-4" *ngFor="let subject of tempreport">
+          <div class="subject-report">
+            <h6>
+              <img class="icon-32" src="{{subject.logo}}" alt="{{subject.subject}}">{{subject.subject}}
+            </h6>
+            <ul class="report-list">
+              <li *ngFor="let event of subject.details">
+                <img class="icon-18" src={{event.logo}} alt="">
+                <div class="report-right-content">
+                  <p class="title-text">{{event.headtext}}</p>
+                  <p>{{event.description || 'NA'}}</p>
+                </div>
+              </li>
+            </ul>
+            <!-- <img class="img-fluid" src="assets/img/subject-chart.png" alt=""> -->
+            <app-bar-chart *ngIf="subject['chartdata']" [testsforchart] = "subject['chartdata'].chartDataList" [barChartLabels_]="subject['chartdata'].labels"></app-bar-chart>
+            <button data-toggle="modal" (click)="viewdetailedreport(subject, report['calculatedSubs'], chaptersList)" type="button" class="btn-link">VIEW DETAILED REPORT</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Subject Report Details End -->
+
+  </div>
+</div>

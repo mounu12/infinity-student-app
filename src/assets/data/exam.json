@@ -1,0 +1,132 @@
+[
+  
+{
+   "exam" :"Medical Practice Test",
+   "description" :"Neet medical practice exam",
+   "examid":"1233",
+   "totalquestions":20,
+   "duration":"30",
+   "examtime":"11:45",
+   "span":"AM",
+   "topics":[
+        {
+         "name" :"BOTANY",
+         "total":"5",
+         "startfrom":0,
+         "position":0,
+         "positionback":4
+        },{
+           "name":"ZOOLOGY",
+           "total":"5" ,
+           "startfrom":5,
+           "position":1,
+           "positionback":9
+        },
+        {
+           "name":"PHYSICS",
+           "total":"5",
+           "startfrom":10 ,
+           "position":2 ,
+           "positionback":14
+        },
+        {
+        "name":"CHEMISTRY",
+        "total":"5",
+        "startfrom":15,
+        "position":3,
+        "positionback":19
+        }
+   ], 
+    
+   "default":"BOTANY",
+   "deftotal" :45,
+   "startfrom":0,
+   "jsonname":"question1.json"
+
+
+},
+{
+   "exam" :"Neet",
+   "description" :"20-01-2021 INCOMING SENIOR ELITE CPS- ONLINE UNIT TEST-1",
+   "examid":"1233",
+   "totalquestions":180,
+   "duration":"180",
+   "examtime":"11:45",
+   "span":"AM",
+   "topics":[
+        {
+         "name" :"BOTANY",
+         "total":"45",
+         "startfrom":0,
+         "position":0,
+         "positionback":44
+        },{
+           "name":"ZOOLOGY",
+           "total":"45" ,
+           "startfrom":45,
+           "position":1,
+           "positionback":89
+        },
+        {
+           "name":"PHYSICS",
+           "total":"45",
+           "startfrom":90,
+           "position":2 ,
+           "positionback":134
+        },
+        {
+        "name":"CHEMISTRY",
+        "total":"5",
+        "startfrom":135,
+        "position":3,
+        "positionback":179
+        }
+   ], 
+    
+   "default":"BOTANY",
+   "deftotal" :45,
+   "startfrom":0,
+   "jsonname":"question3.json"
+
+
+},
+{
+   "exam" :"JEE MAINS",
+   "description" :"JEE MAINS  practice exam",
+   "examid":"1233",
+   "totalquestions":75,
+   "duration":"30",
+   "examtime":"11:45",
+   "span":"AM",
+   "topics":[
+        {
+         "name" :"MATHEMATICS",
+         "total":"25",
+         "startfrom":0,
+         "position":0,
+         "positionback":24
+        },{
+           "name":"PHYSICS",
+           "total":"25" ,
+           "startfrom":25,
+           "position":1,
+           "positionback":49
+        },
+        {
+           "name":"CHEMISTRY",
+           "total":"25",
+           "startfrom":50,
+           "position":1,
+           "positionback":74  
+        }
+       
+   ], 
+    
+   "default":"MATHEMATICS",
+   "deftotal" :45,
+   "startfrom":0,
+   "jsonname":"question2.json"
+
+
+}
+]

@@ -1,0 +1,458 @@
+@import './_colors.scss';
+@import './_variables.scss';
+@import './_mixins.scss';
+
+/* Project based color definitions */
+@include colors($white,
+    'white');
+@include colors($black,
+    'black');
+@include colors($red,
+    'red');
+@include colors($green,
+    'green');
+@include colors($yellow,
+    'yellow');
+@include colors($cyan,
+    'cyan');
+@include colors($blue,
+    'blue');
+@include colors($blue2,
+    'blue2');
+@include colors($blue3,
+    'blue3');
+@include colors($blue4,
+    'blue4');  
+@include colors($dark-blue,
+    'dark-blue');
+@include colors($grey,
+    'grey');
+@include colors($grey2,
+    'grey2');
+@include colors($grey3,
+    'grey3');
+@include colors($pink,
+    'pink');
+@include colors($silver,
+    'silver');
+@include colors($yellow2,
+    'yellow2');
+@include colors($orange,
+    'orange');
+@include colors($oxford-blue,
+    'oxford-blue');
+@include colors($oxford-blue2,
+    'oxford-blue2');
+@include colors($dodgerblue,
+    'dodgerblue');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
+
+@media print {
+    body, .mat-select-value, input, .color-pink { font-size: 13pt!important }
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.no-cursor-pointer {
+    cursor: not-allowed !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.tables-container {
+    height: calc(100vh - 190px);
+    position: relative;
+
+    .mat-table {
+        height: calc(100% - 50px);
+        overflow: auto;
+    }
+}
+
+// --------mat-table styles start here------------
+.mat-header-row {
+    background: #FFF;
+    border-bottom: none;
+}
+
+mat-footer-row,
+mat-header-row,
+mat-row,
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
+    border-bottom-color: $silver;
+}
+
+.mat-row {
+    min-height: 45px !important;
+}
+
+// --------mat-table styles end here------------
+
+
+// --------mat-stepper styles start here------------
+.mat-step-header,.mat-stepper-horizontal-line { 
+    display: none !important;
+}
+// --------mat-stepper styles end here------------
+
+.sidenav-items a.active {
+    background: #596679;
+    border-radius: 0;
+    span {
+        color: #fff !important;
+    }
+} 
+
+
+// --------Start Toaster styles------------
+.toast-container .toast {
+    padding: 10px 15px 10px 15px !important;
+    min-width: 370px !important
+}
+
+.toast-close-button {
+    top: 0 !important;
+    font-size: 16px !important;
+}
+
+.toast-message {
+    font-size: 16px;
+}
+
+#toast-container>.toast-success>.toast-message::before {
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 18px;
+    vertical-align: bottom;
+}
+
+#toast-container>.toast-success {
+    background: greenyellow;
+}
+
+#toast-container>.toast-error>.toast-message::before {
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#toast-container>.toast-error {
+    background: $red;
+}
+
+#toast-container>.toast-warning>.toast-message::before {
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#toast-container>.toast-warning {
+    background: $yellow2;
+    color: $black2 !important;
+}
+
+#toast-container>.toast-info>.toast-message::before {
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#toast-container>.toast-info {
+    background: $cyan;
+}
+
+#toast-container>.ngx-toastr {
+    padding: 15px 15px 15px 15px;
+}
+
+#toast-container>.run-toastr {
+    width: 500px !important;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 15px 15px 15px 15px;
+    width: 300px;
+    border-radius: 3px 3px 3px 3px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    box-shadow: 0 0 12px #999999;
+    color: #FFFFFF;
+    pointer-events: auto !important;
+}
+
+// -------- End Toaster styles ---------------
+
+//--------- Start of spinner styles-----------
+
+.spinner-overlay {
+    position: fixed;
+    // position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .5);
+    z-index: 10000;
+
+    mat-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+
+        circle {
+            stroke: $blue;
+        }
+    }
+
+    &.d-30 mat-spinner {
+        margin-top: -15px;
+        margin-left: -15px;
+    }
+
+    &.inside {
+        position: absolute;
+        background: rgba(252, 252, 252, .9);
+
+        &.op-2 {
+            background: rgba(252, 252, 252, .2);
+        }
+
+        mat-spinner {
+            position: absolute;
+
+            svg {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.spinner-overlay.inside {
+    top: 60px;
+
+    .mat-spinner {
+        margin-top: -26px;
+    }
+}
+
+// -----------End of spinner styles----------
+
+
+// --------mat-tab styles end here------------
+.mat-tab-label {
+    padding-left: 10px !important;
+    padding-right: 10px !important; 
+    min-width: 90px !important;
+    height: 40px !important;
+}
+
+.mat-tab-body {
+    margin-top: 20px !important;
+}
+
+.mat-ink-bar {
+    // background: $blue !important;
+    // width: 3.5% !important;
+    // margin-left: 10px !important;
+    display: none;
+}
+
+.mat-tab-header {
+    border: none !important;
+}
+
+.mat-tab-label {
+    opacity: 1 !important;
+
+    .mat-tab-label-content {
+        color: $grey3 !important;
+    }
+}
+
+.mat-tab-label-active {
+    background: #8ac5f3;
+    .mat-tab-label-content {
+        color: $black !important;
+    }
+
+}
+
+.transformer-view-container {
+    height: calc(100vh - 100px);
+    width: 70%;
+
+    @media  (max-width: 1366px) {
+        width: 70% !important;
+    }
+
+    @media  (max-width: 1225px) {
+        width: calc(100% - 40px) !important
+    }
+
+    @media  (max-width: 805px) {
+        width: calc(100% - 40px) !important
+    }
+
+    @media  (max-width: 768px) {
+        width: calc(100% - 40px) !important
+    }
+
+    .mat-tab-body-wrapper {
+        height: calc(100vh - 170px);
+        padding: 5px 0;
+
+        .basic-panel-container {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
+
+// --------mat-tab styles end here------------
+
+// Start of Remove arrow for input type=number
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+// End of Remove arrow for input type=number
+
+// start of timepicker
+.timepicker-overlay {
+    z-index: 10000000 !important;
+}
+
+.timepicker-backdrop-overlay {
+    z-index: 10000000 !important;
+}
+// end of timepicker
+
+
+// mat-ex[ansion arrow indicator
+.mat-expansion-panel-header-description, 
+.mat-expansion-indicator::after {
+    color: white;
+}
+//
+
+// start of mat-button toggle
+
+// mat-button-toggle-group {
+//     box-shadow: none;
+//   }
+  
+  mat-button-toggle {
+    //   border: 1px rgba(0,0,0,0) solid !important;
+    //   margin-top: 5px !important;
+      padding: 0 5px !important;
+    //   z-index: 3 !important;
+  }
+  
+  mat-button-toggle:hover {
+    //   border: 1px #000 solid !important;
+      background-color: #FFF !important;
+      border-radius: 5px !important;
+  }
+  
+  .mat-button-toggle-checked {
+        // box-shadow: 0 0 30px #000 !important;
+    //   border: 1px #000 solid !important;
+      border-radius: 5px !important;
+      background-color: #1e81cb !important;
+  }
+  
+  .mat-button-toggle-input {
+      background-color: none !important;
+      padding-left: 32px !important;
+  }
+
+  mat-button-toggle-group .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 30px;
+    padding: 0 12px;
+}
+
+// end of mat-button toggle
+
+// .mat-paginator-navigation-previous {
+//     display: none !important;
+// }
+
+// .mat-paginator-navigation-next {
+//         display: none !important;
+//     }
+
+// Input readonly diable icon display
+// input[readonly] {
+//     cursor: not-allowed !important;
+// }
+
+// opacity 
+.opac {
+    opacity: 1 !important;
+}
+
+// hide horizontal scroll bar
+ .overflow-hide{
+    overflow-y: auto;
+    overflow-x: hidden;
+ }
+
+//  .box-user-creation{
+//      padding: 15px;
+//      margin-bottom: 15px;
+//      background-color: white;
+//      border-radius: 5px;
+//  }
+
+.iti[_ngcontent-hgf-c82] .selected-dial-code[_ngcontent-hgf-c82] {
+    margin-left: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}

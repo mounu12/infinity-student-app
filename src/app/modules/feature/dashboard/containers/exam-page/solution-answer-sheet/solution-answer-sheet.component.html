@@ -1,0 +1,18 @@
+<button type="button" class="btn-toggle-hide" (click)="showhidedivHide()"></button> 
+<div class="exam-right-info" *ngIf ="showdiv">
+    <button type="button" class="btn-toggle" (click)="showhidediv()"></button> 
+    <h4>{{selectedQuestions && selectedQuestions.subjectname}} ({{selectedQuestions && (selectedQuestions.questions.length)}})</h4>
+    <div #questionPointerHolderSolution class="question-no bbbb" *ngIf="selectedQuestions && selectedQuestions.questions.length > 0">
+      <ng-container *ngFor="let sq of selectedQuestions.questions;let i = index ">
+        <button class="btn not-answered-btn" *ngIf="!sq.selectedanswer" (click)="showSelectedQuestion(i)">{{i  +startfrom}}</button>
+        <button class="btn correct-answer-btn" *ngIf="sq.selectedanswer && sq.iscorrectanswer == 'Y'" (click)="showSelectedQuestion(i)">{{i  +startfrom}} <span class="marked-review-icon"><img src="assets/img/solution-correct.svg" alt=""></span></button>
+        <button class="btn incorrect-answer-btn" *ngIf="sq.selectedanswer && sq.iscorrectanswer != 'Y' " (click)="showSelectedQuestion(i)" >{{i +startfrom}} <span class="marked-review-icon"><img src="assets/img/solution-incorrect.svg" alt=""></span></button>
+      </ng-container>
+    </div>
+    <div class="legend-box">
+      <div class="legend">Legend</div>
+        <div class="legend-item"><div class="legend-icon correct"></div> Correct answer</div>
+        <div class="legend-item"><div class="legend-icon incorrect"></div> Incorrect answer</div>
+        <div class="legend-item"><div class="legend-icon unattempted"></div> Unattempted</div>
+    </div>
+  </div>

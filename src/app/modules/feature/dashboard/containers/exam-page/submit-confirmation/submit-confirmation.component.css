@@ -1,0 +1,23 @@
+.legend-box { margin-top: 10px  }
+.legend-box ul {
+    padding: 0;
+    margin: 0;
+}
+.legend-box ul li {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.legend-box ul li .result{ float: right; font-weight: 600; line-height: 20px; color: #263643 }
+.legend-box ul li img {
+    margin-right: 8px;
+    margin-bottom: 10px;
+    float: left;
+} 
+  

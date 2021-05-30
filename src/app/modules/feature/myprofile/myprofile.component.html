@@ -1,0 +1,182 @@
+  <!-- Header Start -->
+  <!-- <header class="wow fadeInUp profile" data-wow-delay="0.2s">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <a class="logo" href="/dashboard"><img src="../../../../assets/img/logo-dark.svg" alt="Infinity Learn"> </a>
+          <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+          <div class="logo-right">
+            <div class="btn-group profile-btn-group">
+              <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+                <img src="../../../../assets/img/empty-profile.svg" alt="" />
+              </button>
+                <div class="dropdown-menu dropdown-menu-lg-right">
+                    <button class="dropdown-item" type="button" (click)="showMyProfile()">
+                      <img src="../../../../assets/img/edit-profile-icon-dark.svg" alt="Edit Profile">Profile
+                    </button>
+
+                    <button class="dropdown-item" type="button" (click)="logout()">
+                      <img src="../../../../assets/img/logout-icon-dark.svg" alt="Logout">
+                      Logout
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header> -->
+  <!-- Header End -->
+
+  <!-- My Profile Section Start -->
+  <div class="my-profile-section">
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Profile Left Section Start -->
+        <div class="col-12 col-md-2">
+          <!--Profile Left Pannel Start -->
+          <!-- <aside class="aside">
+            <div class="accordion profile-accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne" >
+                  <button class="btn-block text-left active" type="button" data-toggle="collapse" data-target="#collapseOne" style="background-color: #EAFFF8;"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <img src="../../../../assets/img/assessments-icon-dark.svg" alt="Assessment">
+                      Assessment
+                  </button>
+                </div>
+                <div id="collapseOne" class="collapse show"
+                  data-parent="#accordionExample">
+                  <div class="card-body">
+                    <button type="button" class="btn-link" (click)="showMyDashboard()">NEET Exam</button>
+                    <button type="button" class="btn-link">IIT-JEE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <button class="btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="../../../../assets/img/live-classes-icon-dark.svg" alt="Live Classes"> Live Classes
+                  </button>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside> -->
+        <app-left-navigation></app-left-navigation>
+          
+          <!-- Left Pannel End -->
+        </div>
+        <!-- Profile Left Section End -->
+
+        <!-- Profile Right Section Start -->
+        <div class="col-12 col-md-10">
+          <div class="my-profile-wrapper">
+            <div class="row">
+             
+              <div class="col-12 d-flex justify-content-between">
+               
+                <button type="button" 
+                class="btn btn-outline-secondary" (click)="showMyDashboard()"><img class="ml-0" src="assets/img/back-arrow-icon-dark.svg" /> GO BACK</button>
+                <button (click)="showEditProfile()" type="button"
+                  class="btn btn-outline-secondary">EDIT PROFILE</button>
+              </div>
+            </div>
+
+            <!-- Student Info Start -->
+            <div class="student-info">
+              <h2>My Profile</h2>
+              <div class="row">
+                <div class="col-12 d-flex justify-content-start align-items-center">
+                  <figure>
+                    <img *ngIf="user?.profilePhoto=== null" src="../../../../assets/img/empty-profile.svg" alt="">
+                    <img *ngIf="user?.profilePhoto!=null" [src]="user?.profilePhoto" alt="">
+                  </figure>
+                  <div class="student-details">
+                    <h4>{{user?.firstName + ' ' + user?.lastName}}</h4> <!-- User Name, email, phone should be dynamic from user object-->
+                    <p> <span style="text-decoration: underline;">{{user?.email}}</span> 
+                      <span><button class="verifyemail" (click)="verifyEmail()">VERIFY EMAIL</button></span>
+                      <!-- will have a backend api integration here for the button click for initiating a verification email, SMTP server dependency not resolved-->
+                      <br>  {{formatPhoneNumber(user?.phoneNumber)}}
+                      <!-- {{user?.phoneNumber}} -->  
+                    </p>
+                    <!-- <button type="button" class="btn-link" (click)="showEditProfile()">Change Password</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Student Info End -->
+
+
+            <!-- Academic Details Start -->
+            <div class="academic-details-section">
+              <div class="row">
+                <div class="col-12">
+                  <h5>Academic Details</h5>
+                  <div class="form-row">
+                    <div class="col-auto mb-3">
+                      <div class="academic-info">
+                        <div class="float-left">
+                          <h6>
+                            <img class="icon-24" src="../../../../assets/img/grade-icon.svg" alt="Grade">
+                              Grade
+                          </h6>
+
+                          <div class="academic-info-bottom">
+                            <p>{{user?.grade?.id}}</p> <!-- Grade value should be dynamic from User Object-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-3">
+                      <div class="academic-info">
+                        <div class="float-left">
+                          <h6>
+                            <img class="icon-24" src="../../../../assets/img/grade-icon.svg" alt="Grade">
+                            BOARD
+                          </h6>
+
+                          <div class="academic-info-bottom">
+                            <p>{{user?.board?.boardName.replace('Board', '')}}</p> <!-- Board value should be dynamic from User Object-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-10 form-row">
+                    <div class="col-12">
+                      <div class="academic-info">
+                        <h6 class="pb-20">
+                          <img class="icon-24" src="../../../../assets/img/target-exam-icon.svg" alt="Grade">
+                          Target Exams
+                        </h6>
+
+                        <div class="academic-info-bottom pl-0 p-7" *ngFor="let exam of user?.targetexams">
+                          <p class="d-flex justify-content-between pt-4">
+                            <span style="margin-bottom:20px">{{exam?.targetExam}}</span>
+                            <!-- <span>0/ 0 Tests Attempted </span> -->
+                             <!-- Number of tests attempted by user should be dynamic from Assessments API-->
+                            <span>{{exam?.noOfTests}}</span> 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Academic Details End -->
+          </div>
+        </div>
+        <!-- Profile Right Section End -->
+      </div>
+    </div>
+  </div>
+  <!-- My Profile Section End -->

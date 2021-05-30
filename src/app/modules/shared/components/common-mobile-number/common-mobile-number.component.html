@@ -1,0 +1,40 @@
+<div class="form-group">
+    <form [formGroup]="mobileForm" class="common-intl-phone-form">
+    <!-- <mat-select value="+91" class="country-code" [(ngModel)]="data.countryCode" name="countryCode">
+        <mat-option value="+91">+91</mat-option>
+        <mat-option value="+1">+1</mat-option>
+    </mat-select>
+    <input type="number" class="form-control" maxlength="10" autofocus [(ngModel)]="mobile" name="mobile"
+        (keyup)="doSearch($event)"> -->
+    <ngx-intl-tel-input
+        [cssClass]="'form-control common-intl-phone'"
+		[preferredCountries]="[CountryISO.India, CountryISO.UnitedStates]"
+		[enableAutoCountrySelect]="false"
+		[enablePlaceholder]="false"
+		[searchCountryFlag]="true"
+		[searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+		[selectFirstCountry]="false"
+		[selectedCountryISO]="CountryISO.India"
+		[phoneValidation]="true"
+        [separateDialCode]="true"
+        customPlaceholder="MOBILE NUMBER"
+		maxLength="10"
+        name="phone"
+		formControlName="phone" 
+        customPlaceholder="MOBILE NUMBER" 
+        (keyup)="doSearch($event);isErrorMessage($event)">
+	</ngx-intl-tel-input>
+
+    <mat-error *ngIf="(m.phone.touched) && (m.phone.errors?.pattern)">
+        Pattern mis match
+    </mat-error>
+    <!-- <mat-error *ngIf="isErrorMessage()">
+        Please, Enter 10 digit Mobile Number.
+    </mat-error> -->
+
+    <!-- <div [matTooltip]="!mobileForm.valid? 'Please, Enter 10 digit Mobile Number.': ''" matTooltipPosition="below"> -->
+
+    <button type="button" class="btn btn-primary btn-danger" (click)="signup()" [disabled]="!mobileForm.valid || !mobileNumberValid">START LEARNING</button>
+    <!-- </div> -->
+</form>
+</div>

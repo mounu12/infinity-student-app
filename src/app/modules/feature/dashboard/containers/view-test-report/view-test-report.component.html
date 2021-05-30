@@ -1,0 +1,564 @@
+<div class="exam-report-details-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <button routerLink="/dashboard" type="button" class="btn btn-outline-secondary mb-25"><img class="ml-0 mr-2" src="assets/img/back-arrow-icon-dark.svg" alt=""> GO BACK</button>
+          <h3>Test Feedback Report and Solutions | {{ testReport.testname }}</h3>
+      </div>
+    </div>
+
+    <div class="mock-test-info">
+      <div class="row">
+        <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+          <div class="mock-test-details">
+            <p class="pb-2">
+              <img
+                class="icon-18"
+                src="assets/img/average-score-icon.svg"
+                alt="Tests Attempted"
+              />
+              Overall Score
+            </p>
+            <p class="score">
+              <span class="text-success">{{
+                (testReport.correctAnswer * scorePerQuestion) - (testReport.incorrectAnswer * negetiveScorePerQuestion)
+              }}</span>
+              / {{ testReport.totalQuestions * scorePerQuestion }}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 border-right-sm-0 mb-4">
+          <div class="mock-test-details pl-0 pl-md-4">
+            <p class="pb-2">
+              <img
+                class="icon-18"
+                src="assets/img/time-spend-icon.svg"
+                alt="Tests Attempted"
+              />
+              Total Time Spent
+            </p>
+            <p class="score">
+              <span class="text-dark">{{ testReport.totaltimespentinhrs }}</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-6 border-right-sm-0 mb-4 text-left text-md-right"
+        >
+          <button class="btn btn-info" type="button" (click)="viewSolutions()">
+            View full solution
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-report-score">
+      <div class="row">
+        <div class="col-12 text-center overall-status">
+          <!-- <img src="assets/img/test-report.png" alt="" class="img-fluid"> -->
+          <!-- <div class="score-card d-flex align-items-center">
+              <div class="score-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: {{((report.score * 4 - report.wronganswers) / (report.totalquestions *4)) * 100 }}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="score">{{report.score * 4 - report.wronganswers}} / {{ report.totalquestions *4 }}</div>
+            </div> -->
+
+          <div class="custom-progress-bar">
+            <div
+              [style.width]="
+                ((testReport.correctAnswer * scorePerQuestion) - (testReport.incorrectAnswer * negetiveScorePerQuestion)) > 0
+                  ? ( ( (testReport.correctAnswer * scorePerQuestion) - (testReport.incorrectAnswer * negetiveScorePerQuestion) )/testReport.totalQuestions)*100 + '%'
+                  : '0%'
+              "
+              class="your-score-bar"
+            >
+              <div class="y-score">
+                <span class="text">Your Score</span>
+                <img class="icon" src="assets/img/your-score-icon.svg" alt="" />
+              </div>
+              <span class="score">{{
+              (testReport.correctAnswer * scorePerQuestion) - (testReport.incorrectAnswer * negetiveScorePerQuestion)
+              }}</span>
+            </div>
+            <div
+              [style.width]="(averageScore / testReport.totalQuestions) * 100 + '%'"
+              class="avg-score-bar"
+            >
+              <div class="y-score">
+                <span class="text">Avg. Score</span>
+                <img
+                  class="icon"
+                  src="assets/img/avg-scorebar-icon.svg"
+                  alt=""
+                />
+              </div>
+              <span class="score">{{ averageScore }}</span>
+            </div>
+            <div
+              [style.width]="(cutOffScore / testReport.totalQuestions) * 100 + '%'"
+              class="cutoff-score-bar"
+            >
+              <div class="y-score">
+                <span class="text">NEET 2018 Cutoff</span>
+                <img
+                  class="icon"
+                  src="assets/img/cutoff-score-icon.svg"
+                  alt=""
+                />
+              </div>
+              <span class="score">{{ cutOffScore }}</span>
+            </div>
+            <span class="start-score">0</span>
+            <span class="total-score">{{ testReport.totalQuestions }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-info">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <p class="info d-flex align-items-center">
+            <img src="assets/img/great-icon.svg" alt="" />
+            <span
+              ><strong>You’re doing great!</strong> Ideally solving 2 papers a
+              week should help you get better within a month!</span
+            >
+          </p>
+        </div>
+        <div class="col-12 col-md-4 text-right">
+          <div class="dropdown">
+            <a
+              class="btn-link dropdown-toggle"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              (click)="takeAnotherTest()"
+            >
+              Take another test
+            </a>
+            <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item text-center" href="instructions.html"
+                >Mock Test Flow</a
+              >
+              <a class="dropdown-item text-center" href="open-list.html"
+                >Previous Year Paper Flow
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overall-status">
+      <div class="row">
+        <div class="col-12">
+          <h3>Overall Stats</h3>
+          <div class="subjectwise-score">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h4>Subjectwise score</h4>
+                <div
+                  class="score-card d-flex align-items-center"
+                  *ngFor="let subject of testReport.testSubjects"
+                >
+                  <div class="name">{{ subject.subjectName }}</div>
+                  <div class="score-progress">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        [style.width]="(subject.totalScore /
+                            (subject.totalQuestions * scorePerQuestion)) *
+                            100+'%'"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="score">
+                    {{
+                      subject.totalScore
+                    }}
+                    / {{ subject.totalQuestions * scorePerQuestion }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="score-short-info d-flex align-items-start">
+                  <img class="icon" src="assets/img/great-icon.svg" alt="" />
+                  <div class="right-content">
+                    <h4>Good Job</h4>
+                    <p>
+                      Your performance in {{testReport.bestSubject.toLowerCase()}} was superb.
+                      However, you can improve your performance in {{testReport.scopeOfImprovement.toLowerCase()}}
+                      through some extra practice
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subjectwise-score-details">
+            <div class="row">
+              <div class="col-12 col-lg-3 border-right">
+                <ul class="report-list">
+                  <li>
+                    <img
+                      class="icon-26 mr-0"
+                      src="assets/img/accuracy-icon.svg"
+                      alt=""
+                    />
+                    <div class="report-right-content">
+                      <p class="title-text pl-30">
+                        Accuracy
+                        <span class="info-icon"
+                          ><img src="assets/img/info-icon.svg" alt="" />
+                        </span>
+                      </p>
+                      <p class="pl-30">
+                        {{
+                          testReport.accuracy | number: "1.2-2"
+                        }}%
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img
+                      class="icon-26 mr-0"
+                      src="assets/img/time-spend-icon.svg"
+                      alt=""
+                    />
+                    <div class="report-right-content">
+                      <p class="title-text pl-30">Avg. time per question</p>
+                      <p class="pl-30">{{ getTimeDetails(testReport.averageTimePerQuestion) }}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-4 border-right">
+                <ul class="report-list">
+                  <li>
+                    <img
+                      class="icon-26 mr-0"
+                      src="assets/img/best-chapter-icon.svg"
+                      alt=""
+                    />
+                    <div class="report-right-content">
+                      <p class="title-text pl-30">Best Subjects</p>
+                      <p class="pl-30">
+                       {{testReport.bestSubject}} - {{testReport.bestChapter}}
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img
+                      class="icon-26 mr-0"
+                      src="assets/img/scope-of-improvement-icon.svg"
+                      alt=""
+                    />
+                    <div class="report-right-content">
+                      <p class="title-text pl-30">Scope of improvement</p>
+                      <p class="pl-30">
+                        {{testReport.scopeOfImprovement}} - {{testReport.scopeOfImprovementChapter}}
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-12 col-lg-5 d-flex align-items-center justify-content-start"
+              >
+                <!-- <img class="img-fluid" src="assets/img/score-card.svg" alt="">  -->
+                <div class="chart-wrapper">
+                  <div class="subjectwise-chart">
+                    <app-donut-chart
+                      style="
+                        height: 175px;
+                        width: 175px;
+                        position: relative;
+                        left: -50px;
+                      "
+                      [donchd]="testReport.overallChartData"
+                    >
+                    </app-donut-chart>
+                  </div>
+                  <h6 class="attempted-text">
+                    Total Attempted <span>{{testReport.correctAnswer+this.testReport.incorrectAnswer}}</span>
+                  </h6>
+                  <ul class="legend-list">
+                    <li>
+                      <span class="status-correct"></span> Correct
+                      <span class="number">{{testReport.correctAnswer}}</span>
+                    </li>
+                    <li>
+                      <span class="status-incorrect"></span> Incorrect
+                      <span class="number">{{testReport.incorrectAnswer}}</span>
+                    </li>
+                    <li>
+                      <span class="status-unattempted"></span> Unattempted
+                      <span class="number">{{testReport.unAttemptedQuestions}}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subject-wise breakdown Section Start -->
+    <div class="subject-wise-breakdown-section">
+      <div class="row">
+        <div class="col-12">
+          <h3>Subject-wise breakdown</h3>
+        </div>
+      </div>
+
+      <!-- PHYSICS Start -->
+      <div
+        class="subject-wise-breakdown mb-40"
+        *ngFor="let subject of testReport.testSubjects"
+      >
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h6>
+              
+              <img class="icon-32" src="{{subject.subjectLogo}}" />
+              {{subject.subjectName}}
+            </h6>
+          </div>
+          <div class="col-12 col-md-6 view-right">
+            <button
+              (click)="viewSolutions(subject.subjectName)"
+              type="button"
+              class="btn btn-link"
+            >
+              View solutions
+            </button>
+          </div>
+        </div>
+        <div class="mock-test-info">
+          <div class="row">
+            <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+              <div class="mock-test-details">
+                <p>
+                  <img
+                    class="icon-26"
+                    src="assets/img/time-spend-icon.svg"
+                    alt="Tests Attempted"
+                  />
+                  Total time taken
+                </p>
+                <p class="score">{{ getTimeDetails(subject.totalVisitedTime) }}</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+              <div class="mock-test-details pl-0 pl-md-4">
+                <p>
+                  <img
+                    class="icon-26"
+                    src="assets/img/time-spend-icon.svg"
+                    alt="Tests Attempted"
+                  />
+                  Avg. time per question
+                </p>
+                <p class="score">
+                  {{ getTimeDetails(subject.totalVisitedTime/subject.totalVisitedQuestions) }}
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+              <div class="mock-test-details pl-0 pl-md-4">
+                <p>
+                  <img
+                    class="icon-26"
+                    src="assets/img/accuracy-icon.svg"
+                    alt="Tests Attempted"
+                  />
+                  Accuracy
+                  <span class="info-icon"
+                    ><img src="assets/img/info-icon.svg" alt="" />
+                  </span>
+                </p>
+                <p class="score">
+                  {{subject.accuracy | number: "1.2-2"}}%
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="mock-test-details pl-0 pl-md-4 mb-4">
+                <p>
+                  <img
+                    class="icon-26"
+                    src="assets/img/avg-score-icon.svg"
+                    alt="Tests Attempted"
+                  />
+                  Score
+                </p>
+                <p class="score">
+                  {{subject.totalScore}}/{{subject.totalQuestions * scorePerQuestion}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- <img src="assets/img/score-card-2.svg" alt="" class="img-fluid"> -->
+            <!-- <app-donut-chart [donchd]="calcsub['chartData']"></app-donut-chart> -->
+
+            <div class="chart-wrapper">
+              <div class="subjectwise-chart">
+                <app-donut-chart
+                  style="
+                    height: 175px;
+                    width: 175px;
+                    position: relative;
+                    left: -50px;
+                  "
+                  [donchd]="subject.chartData"
+                >
+                </app-donut-chart>
+              </div>
+              <h6 class="attempted-text">Total Attempted <span>{{subject.totalAttemptedQuestions}}</span></h6>
+              <ul class="legend-list">
+                <li>
+                  <span class="status-correct"></span> Correct
+                  <span class="number">{{subject.totalCorrectQuestions}}</span>
+                </li>
+                <li>
+                  <span class="status-incorrect"></span> Incorrect
+                  <span class="number">{{subject.totalInCorrectQuestions}}</span>
+                </li>
+                <li>
+                  <span class="status-unattempted"></span> Unattempted
+                  <span class="number">{{subject.totalUnAttemptedQuestions}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-8 mt-30">
+          <div class="col-12">
+            <div class="report-chart-marks">
+              <div class="table-responsive">
+                <table class="table table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th width="25%" scope="col">Strongest Chapters</th>
+                      <th width="20%" scope="col" class="text-center">
+                        Number of questions
+                      </th>
+                      <th width="15%" scope="col" class="text-center">
+                        Correct
+                      </th>
+                      <th width="20%" scope="col" class="text-center">
+                        Incorrect
+                      </th>
+                      <th width="20%" scope="col" class="text-center">
+                        Avg. Time/question
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-container *ngFor="let chapt of subject.bestChapters;let i = index">
+                      <tr *ngIf="i<3">
+                        <th scope="row">
+                          {{
+                          chapt.chapter != "null"
+                          ? chapt.chapter
+                          : "NA"
+                          }}
+                        </th>
+                        <td class="text-center">
+                          {{ chapt.totalQuestions }}
+                        </td>
+                        <td class="text-center">{{ chapt.correctQuetions }}</td>
+                        <td class="text-center">{{ chapt.incorrectQuetions }}</td>
+                        <td class="text-center">
+                          {{ (chapt.totalVisitedTime/chapt.totalQuestions) | number: "1.2-2" }}s
+                        </td>
+                      </tr>
+                    </ng-container>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="report-chart-marks">
+              <div class="table-responsive">
+                <table class="table table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th width="25%" scope="col">
+                        Chapters that need attention
+                      </th>
+                      <th width="20%" scope="col" class="text-center">
+                        Number of questions
+                      </th>
+                      <th width="15%" scope="col" class="text-center">
+                        Correct
+                      </th>
+                      <th width="20%" scope="col" class="text-center">
+                        Incorrect
+                      </th>
+                      <th width="20%" scope="col" class="text-center">
+                        Avg. Time/question
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-container *ngFor="let chapt of subject.bestChapters.reverse();let i = index">
+                    <tr *ngIf="i<3">
+                      <th scope="row">
+                        {{
+                        chapt.chapter != "null"
+                        ? chapt.chapter
+                        : "NA"
+                        }}
+                      </th>
+                      <td class="text-center">
+                        {{ chapt.totalQuestions }}
+                      </td>
+                      <td class="text-center">{{ chapt.correctQuetions }}</td>
+                      <td class="text-center">{{ chapt.incorrectQuetions }}</td>
+                      <td class="text-center">
+                        {{ (chapt.totalVisitedTime/chapt.totalQuestions) | number: "1.2-2" }}s
+                      </td>
+                    </tr>
+                    </ng-container>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PHYSICS End -->
+    </div>
+    <!-- Subject-wise breakdown Section Emd -->
+
+    <!-- <div class="d-flex justify-content-center">
+      <a type="button" class="btn btn-primary"
+        ><img
+          src="/assets/img/back-arrow-icon-light.svg"
+          alt=""
+          class="ml-0 mr-2"
+        />
+        Back to Mock Tests</a
+      >
+    </div> -->
+  </div>
+</div>

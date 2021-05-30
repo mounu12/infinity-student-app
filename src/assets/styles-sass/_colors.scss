@@ -1,0 +1,39 @@
+/* Colors */
+@mixin colors($color, $color-text) {
+    /* Backgrounds */
+    .bg-#{$color-text} {
+      background: $color!important;
+    }
+    .bg-outline-#{$color-text} {
+      color: $color!important;
+      background: transparent!important;
+      border: 2px solid $color!important;
+      &.mat-raised-button {
+        line-height: 32px;
+      }
+    }
+    .table-striped-bg tr.mat-row:nth-child(even) .bg-#{$color-text} {
+      background: lighten($color, 2%)!important;
+    }
+    /* Text colors */
+    .color-#{$color-text} {
+      color: $color!important;
+    }
+
+    /* Border Colors */
+    .border-#{$color-text} {
+      border: 1px solid $color!important;
+    }
+    .border-top-#{$color-text} {
+      border-top: 1px solid $color!important;
+    }
+    .border-right-#{$color-text} {
+      border-right: 1px solid $color!important;
+    }
+    .border-bottom-#{$color-text} {
+      border-bottom: 1px solid $color!important;
+    }
+    .border-left-#{$color-text} {
+      border-left: 1px solid $color!important;
+    }
+}

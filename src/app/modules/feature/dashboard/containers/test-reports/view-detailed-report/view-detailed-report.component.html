@@ -1,0 +1,127 @@
+<div class="subject-result-details-modal">
+  <div class="row mb-4">
+    <div class="col-12 col-md-8">
+      <h4><img class="icon-32" src="assets/img/chemistry-icon.svg" alt="Chemistry"> {{data.subject.subject}}</h4>
+    </div>
+  </div>
+  <div class="form-row pt-30 pb-45 subject-result-details-info">
+    <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+      <div class="mock-test-details d-flex justify-content-center align-items-start">
+        <img class="icon-18 align-top mr-5" src="assets/img/avg-score-icon.svg" alt="Average Score">
+        <p>Average Score <span class="d-block score">{{data.subject.details[2].description}}</span> </p>
+      </div>
+    </div>
+    <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+      <div class="mock-test-details d-flex justify-content-center align-items-start">
+        <img class="icon-18 align-top mr-5" src="assets/img/time-spend-icon.svg" alt="Avg. time spent">
+        <p> Avg. time spent <span class="d-block score">{{timeConvert(data.subject.subjectmetadata.totaltimespent/data.subject.subjectmetadata.count)}}</span></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-3 border-right-sm-0 border-right mb-4">
+      <div class="mock-test-details d-flex justify-content-center align-items-start">
+        <img class="icon-18 align-top mr-5" src="assets/img/time-spend-icon.svg" alt="Avg. time per question">
+        <p> Avg. time per question <span class="d-block score">{{timeConvert(data.subject.subjectmetadata.totaltimespent/data.subject.subjectmetadata.count)}}</span> </p>
+      </div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="mock-test-details d-flex justify-content-center align-items-start">
+        <img class="icon-18 align-top mr-5" src="assets/img/accuracy-icon.svg" alt="Accuracy">
+        <p> Accuracy <span class="info-icon"><img src="assets/img/info-icon.svg" alt=""> </span> <span class="d-block score">{{((data.subject.subjectmetadata.correctanswercount - data.subject.subjectmetadata.wronganswercount)/(data.subject.subjectmetadata.correctanswercount + data.subject.subjectmetadata.wronganswercount)) * 100}}%</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-5 col-xs-12 text-center"><h4>Your performance</h4></div>
+      <div class="col-lg-3 col-xs-12 text-center">
+          <div class="dropdown btn-overall-score">
+          <button class="btn btn-outline-secondary btn-score dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SCORE
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Select</a>
+          </div>
+      </div>
+  </div>
+      <div class="col-lg-4 col-xs-12 text-center">
+          <div class="dropdown btn-month ">
+            <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              1 Month
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">1 WEEK</a>
+              <a class="dropdown-item" href="#">15 DAYS</a>
+              <a class="dropdown-item" href="#">1 MONTH</a>
+              <a class="dropdown-item" href="#">3 MONTH</a>
+              <a class="dropdown-item" href="#">6 MONTH</a>
+              <a class="dropdown-item" href="#">1 YEAR</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+ 
+  <div class="row">
+    <div class="col-12">
+      <!-- <img src="assets/img/Chemistry-chart.png" alt="" class="img-fluid"> -->
+      <app-bar-chart></app-bar-chart>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-12">
+      <div class="report-chart-marks">
+        <div class="table-responsive">
+          <table class="table table-borderless mb-0">
+            <thead>
+              <tr>
+                <th width="25%" scope="col" class="text-success">Strongest Chapters</th>
+                <th width="20%" scope="col" class="text-center">Number of questions</th>
+                <th width="15%" scope="col" class="text-center">Correct</th>
+                <th width="20%" scope="col" class="text-center">Incorrect</th>
+                <th width="20%" scope="col" class="text-center">Avg. Time/question</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bestc of data.subject.subjectmetadata.bestchapter">
+                <th scope="row">{{data.chaptersList[bestc.chaptername]}}</th>
+                <td class="text-center">{{bestc.count}}</td>
+                <td class="text-center">{{bestc.correct}}</td>
+                <td class="text-center">{{bestc.wrong}}</td>
+                <td class="text-center">{{timeConvert(bestc.timespent)}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="report-chart-marks">
+        <div class="table-responsive">
+          <table class="table table-borderless mb-0">
+            <thead>
+              <tr>
+                <th width="25%" scope="col" class="text-danger">Chapters that need attention</th>
+                <th width="20%" scope="col" class="text-center">Number of questions</th>
+                <th width="15%" scope="col" class="text-center">Correct</th>
+                <th width="20%" scope="col" class="text-center">Incorrect</th>
+                <th width="20%" scope="col" class="text-center">Avg. Time/question</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let soi of data.subject.subjectmetadata.scopeofimprovement">
+                <th scope="row">{{data.chaptersList[soi.chaptername]}}</th>
+                <td class="text-center">{{soi.count}}</td>
+                <td class="text-center">{{soi.correct}}</td>
+                <td class="text-center">{{soi.wrong}}</td>
+                <td class="text-center">{{timeConvert(soi.timespent)}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

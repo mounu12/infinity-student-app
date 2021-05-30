@@ -1,0 +1,50 @@
+<div class="">
+    <mat-dialog-content class="" style="scroll-behavior: unset;" (keyup)="keyEscape($event)">
+        <div class="font-14 heading">
+            <h4>{{ data?.message }} <span ><button class="closeButton" (click)="closeDialogue()">X</button></span> </h4>
+        </div>
+        <div class="pb-30 font-16">
+            {{ data?.message2 }}
+        </div>
+        <form [formGroup]="signupForm">
+            <div class="signup-form-input-mobile">
+                <img class="signup-form-input-icon" src="../../../../../assets/img/phone-icon.svg" alt="" />
+                <input class="signup-form-input-field" type="text" maxlength="10" formControlName="phone" placeholder="Phone Number" readonly>
+                <button class="signup-form-input-button" (click)="editMobileNumber()">EDIT</button>
+            </div>
+
+            <div class="signup-form-input-icons">
+                <img class="signup-form-input-icon" src="../../../../../assets/img/user-icon.svg" alt="" />
+                <input class="signup-form-input-field" type="text" formControlName="firstName" placeholder="First Name" required>
+                <mat-error class="error-msg" *ngIf="s.firstName.touched && s.firstName.errors?.required">
+                    First name is required
+                </mat-error>
+            </div>
+
+            <div class="signup-form-input-icons">
+                <img class="signup-form-input-icon" src="../../../../../assets/img/user-icon.svg" alt="" />
+                <input class="form-control signup-form-input-field" type="text" formControlName="lastName" placeholder="Last Name" (keypress)="enterKey($event)" required>
+                    <mat-error class="error-msg" *ngIf="s.lastName.touched && s.lastName.errors?.required">
+                        Last name is required
+                    </mat-error>
+            </div>
+
+            <div>
+                <input type="checkbox" formControlName="isWhatsappConsent"
+                    (change)="checkbox(signupForm?.value?.isWhatsappConsent ? true: false)" value="true" checked>
+                <label class="p-5"> Receive updates on Whatsapp</label><br>
+            </div>
+
+            <div class="terms-conditions mt-0">
+                By Signing up, you are agreeing to our <a class="anchor" (click)="openTermsAndConditionsDialog()">Terms & Conditions and Privacy Policy</a>
+            </div>
+
+            <button class="btn btn-primary btn-block" id="RegisterAndVerify" type="button" data-toggle="modal" (click)="next()"
+                data-dismiss="modal">REGISTER AND VERIFY NUMBER
+            </button>
+
+        </form>
+
+    </mat-dialog-content>
+
+</div>

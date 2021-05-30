@@ -1,0 +1,59 @@
+
+/* Placeholders */
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+/* Height */
+.height-full { height: 100%; }
+@for $i from 0 through 10 { .height-#{($i*5)} { height: #{($i*5)}px!important; } }
+@for $i from 1 through 10 { .height-#{($i*10)+50} { height: #{($i*10)+50}px!important; } }
+@for $i from 1 through 7 { .height-#{($i*50)+150} { height: #{($i*50)+150}px!important; } }
+@for $i from 1 through 10 { .height-#{($i*100)+500} { height: #{($i*100)+500}px!important; } }
+
+/* Width */
+.width-full { width: 100%; }
+@for $i from 0 through 10 { .width-#{($i*5)} { width: #{($i*5)}px!important; } }
+@for $i from 1 through 10 { .width-#{($i*10)+50} { width: #{($i*10)+50}px!important; } }
+@for $i from 1 through 7 { .width-#{($i*50)+150} { width: #{($i*50)+150}px!important; } }
+@for $i from 1 through 10 { .width-#{($i*100)+500} { width: #{($i*100)+500}px!important; } }
+
+/* Font size */
+@for $i from 10 through 30 { .font-#{($i)} { font-size: #{($i)}px!important; } }
+@for $i from 1 through 14 { .font-#{($i*5)+30} { font-size: #{($i*5)+30}px!important; } }
+
+/* Border radius */
+@for $i from 0 through 20 { .border-radius-#{$i} { border-radius: #{($i)}px!important; } }
+
+/* Opacity */
+.opacity-10 { opacity: 1;}
+@for $i from 0 through 9 { .opacity-#{($i)} { opacity: #{'.'+($i)}!important; } }
+
+/* Margins and Paddings */
+@for $j from 0 through 32 {
+$i: if($j>15, ($j - 12) * 5, $j);
+
+.m-#{($i)} { margin: #{($i)}px!important; }
+.mx-#{($i)} { margin-left: #{($i)}px!important; margin-right: #{($i)}px!important; }
+.my-#{($i)} { margin-top: #{($i)}px!important; margin-bottom: #{($i)}px!important; }
+.mt-#{($i)} { margin-top: #{($i)}px!important; }
+.mr-#{($i)} { margin-right: #{($i)}px!important; }
+.mb-#{($i)} { margin-bottom: #{($i)}px!important; }
+.ml-#{($i)} { margin-left: #{($i)}px!important; }
+
+.p-#{($i)} { padding: #{($i)}px!important; }
+.px-#{($i)} { padding-left: #{($i)}px!important; padding-right: #{($i)}px!important; }
+.py-#{($i)} { padding-top: #{($i)}px!important; padding-bottom: #{($i)}px!important; }
+.pt-#{($i)} { padding-top: #{($i)}px!important; }
+.pr-#{($i)} { padding-right: #{($i)}px!important; }
+.pb-#{($i)} { padding-bottom: #{($i)}px!important; }
+.pl-#{($i)} { padding-left: #{($i)}px!important; }
+
+}
+
+/* font weight */
+@for $i from 1 through 9 { .font-w#{($i)} { font-weight: #{($i*100)}!important; } }

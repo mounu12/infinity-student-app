@@ -1,0 +1,197 @@
+<div class="assessment-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <app-left-navigation></app-left-navigation>
+
+            </div>
+
+            <div class="col-12 col-md-10">
+                <div class="row mb-25">
+                    <div class="col-12">
+                        <a routerLink="/dashboard" type="button" class="btn-back">{{infoBoxes[0].heading}}</a>
+                    </div>
+                </div>
+
+                <app-my-reports [infoBoxes]="infoBoxes">
+                </app-my-reports>
+
+                <!-- All tests Section Start -->
+                <div class="all-tests-section">
+                    <div class="row title-with-filter">
+                        <div class="col-12 d-flex justify-content-between">
+                            <h4>ALL TESTS</h4>
+
+                            <div class="float-right d-flex align-items-center">
+                                <ul class="nav nav-pills filter-pills mr-15" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="pills-list-tab" data-toggle="pill"
+                                            href="#pills-list" role="tab" aria-controls="pills-list"
+                                            aria-selected="true">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="pills-grid-tab" data-toggle="pill" href="#pills-grid"
+                                            role="tab" aria-controls="pills-grid" aria-selected="false">Grid</a>
+                                    </li>
+                                </ul>
+
+                                <div class="dropdown btn-filter-dropdown float-right">
+                                    <button class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        FILTER <img src="assets/img/filter-icon-dark.svg" alt="">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item text-center" (click)="filterAttempted()">Attempted</a>
+                                        <a class="dropdown-item text-center" (click)="filterUnattempted()">Unattempted</a>
+                                        <a class="dropdown-item text-center" (click)="clearFilter()">Clear</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- List View Start -->
+                        <div class="tab-pane fade show active" id="pills-list" role="tabpanel"
+                            aria-labelledby="pills-list-tab">
+                            <!--List Table Start -->
+                            <div class="table-responsive">
+                                <table class="table bg-white">
+                                    <thead>
+                                        <tr>
+                                            <th width="25%" scope="col">Test Name</th>
+                                            <th width="25%" scope="col" class="text-center">Time Taken</th>
+                                            <th width="25%" scope="col" class="text-center">Your score</th>
+                                            <th width="25%" scope="col" class="text-center">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngIf="alltestlist && alltestlist.length === 0 " >
+                                            <td colspan="4" style="text-align: center;"> <span >No Tests Available</span> </td>
+                                        </tr>
+                                        <tr *ngFor="let test of alltestlist">
+                                            <th scope="row"><img class="mr-1" src="assets/img/exam-icon.svg" alt="Icon">
+                                                {{test['rulename']}}</th>
+                                            <td class="text-center">{{test['totaltimespend'] ? timeConvert(test['totaltimespend']) :
+                                                'N/A'}}</td>
+                                            <td class="text-center">{{test['score'] ? test['score']+''+'/720' : 'N/A'}}</td>
+                                            <td class="text-center">
+                                                <button *ngIf="test && !test['testtaken']"
+                                                    (click)="attemptTestNow(test)" type="button"
+                                                    class="btn btn-info btn-attempt">Attempt now</button>
+                                                <button type="button" *ngIf="test && test['testtaken']"
+                                                    (click)="viewTestReport(test)" class="btn-link">View Test
+                                                    report</button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- List Table End  -->
+                            <!-- Pagination Start -->
+                            <div class="d-flex justify-content-center" *ngIf="alltestlist && alltestlist.length > 10 ">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true"><img
+                                                        src="assets/img/pagination-prev-arrow-dark.svg" alt=""> </span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true"><img
+                                                        src="assets/img/pagination-next-arrow-dark.svg  " alt=""></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Pagination End -->
+
+                        </div>
+                        <!-- List View End -->
+
+                        <!-- Grid View Start -->
+                        <div class="tab-pane fade" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+
+                            <div class="row sub-title">
+                                <div class="col-12">
+                                    <h5><span>NEET 2020</span></h5>
+                                </div>
+                            </div>
+                            <!-- Tesst Result Start -->
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-20" *ngFor="let test of alltestlist">
+                                    <div class="exam-card">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6><img src="assets/img/exam-icon.svg" alt="Icon"> {{test['schedulename']}}
+                                            </h6>
+                                            <img src="assets/img/exam-completed-icon.svg" alt="Exam Completed">
+                                        </div>
+                                        <div class="form-row exam-test-info">
+                                            <div class="col-6 col-md-6">
+                                                <p>Test Taken <span class="d-block">{{test['testtaken'] ? 'YES' :
+                                                        'N/A'}}</span></p>
+                                            </div>
+                                            <div class="col-6 col-md-6">
+                                                <p>Your Score <span class="d-block">{{test['score'] ? test['score'] :
+                                                        '-'}}</span></p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="test && !test['testtaken']" (click)="attemptTestNow(test)"
+                                            type="button" class="btn btn-info">Attempt now</button>
+                                        <button *ngIf="test && test['testtaken']" type="button" class="btn-link"
+                                            (click)="viewTestReport(test)">VIEW TEST REPORT</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Tesst Result End -->
+
+
+
+                            <!-- Pagination Start -->
+                            <div class="d-flex justify-content-center" *ngIf="alltestlist && alltestlist.length > 10 ">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true"><img
+                                                        src="assets/img/pagination-prev-arrow-dark.svg" alt=""> </span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true"><img
+                                                        src="assets/img/pagination-next-arrow-dark.svg  " alt=""></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Pagination End -->
+
+                        </div>
+                        <!-- Grid View End -->
+                    </div>
+
+                </div>
+                <!-- All tests Section End -->
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

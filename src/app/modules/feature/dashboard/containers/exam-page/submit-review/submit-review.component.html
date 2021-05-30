@@ -1,0 +1,46 @@
+<form #reviewform="ngForm" class="feedback-form">
+    <div>
+        <h4 class="pb-25">Great! Can you help you with your feedback?</h4>
+        <p>1. Rate the difficulty level of the test</p>
+        <div class="d-flex justify-content-start mb-30">
+            <button class="btn" type="button" [ngClass]="reviewForm.difficultyLevel === 'EASY' ? 'btn-success-light': 'btn-outline-secondary'" (click)="setDifficulty('EASY')">EASY</button>
+            <button class="btn" [ngClass]="reviewForm.difficultyLevel === 'MEDIUM' ? 'btn-success-light': 'btn-outline-secondary'" (click)="setDifficulty('MEDIUM')">MEDIUM</button>
+            <button class="btn" [ngClass]="reviewForm.difficultyLevel === 'HARD' ? 'btn-success-light': 'btn-outline-secondary'" (click)="setDifficulty('HARD')">HARD</button>
+        </div>
+        <p>2. Check all the options you faced difficulty with</p>
+        <div class="mb-30">
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input"
+                    [(ngModel)]="reviewForm.difficultylevelOptions.Buffering" [ngModelOptions]="{standalone: true}" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Buffering</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" [(ngModel)]="reviewForm.difficultylevelOptions['Internet Issue']" [ngModelOptions]="{standalone: true}">
+                <label class="custom-control-label" for="customCheck2">Internet Issue</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck3" [(ngModel)]="reviewForm.difficultylevelOptions['Test did not load']" [ngModelOptions]="{standalone: true}">
+                <label class="custom-control-label" for="customCheck3">Test did not load</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck4" [(ngModel)]="reviewForm.difficultylevelOptions['Images did not load']" [ngModelOptions]="{standalone: true}">
+                <label class="custom-control-label" for="customCheck4">Images did not load</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck5" [(ngModel)]="reviewForm.difficultylevelOptions['Images were not clear']" [ngModelOptions]="{standalone: true}">
+                <label class="custom-control-label" for="customCheck5">Images were not clear
+                </label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck6" [(ngModel)]="reviewForm.difficultylevelOptions['Other']" [ngModelOptions]="{standalone: true}">
+                <label class="custom-control-label" for="customCheck6">Other</label>
+            </div>
+        </div>
+        <div class="form-group pb-3">
+            <input type="text" class="form-control feedback" placeholder="Add your feedback here" [(ngModel)]="reviewForm.feedback" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="d-flex justify-content-start">
+            <button class="btn btn-primary mb-0" type="button" data-dismiss="modal" (click)="submitReview()">Submit</button>
+        </div>
+    </div>
+</form>

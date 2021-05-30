@@ -1,0 +1,36 @@
+<div class="my-report-box cursor-pointer" *ngIf="!reportAvailable">
+    <img class="icon" src="assets/img/my-repoort-icon.svg" alt="">
+    <div class="report-right-info">
+      <h4>My Report</h4>
+      <p>Report and statistics will be generated once you take a test. Click on ATTEMPT A TEST to get started
+      </p>
+    </div>
+  </div>
+
+
+  <div class="my-report-box-info" *ngIf="reportAvailable">
+    <h4>My Report <a routerLink="/dashboard/testsreport" type="button" class="btn-link float-right">VIEW DETAILED REPORT</a></h4>
+    <div class="row">
+      <div class="col-12 col-md-4 border-right-sm-0 border-right border-right mb-4">
+        <div class="report-details">
+          <p><img class="icon-18" src="assets/img/tests-attempted-icon.svg" alt="Tests Attempted"> Tests
+            Attempted</p>
+          <p class="score"><span class="text-success">{{report.completedtests}}</span> <span class="small"> / {{report.totaltests}}</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 border-right-sm-0 border-right mb-4">
+        <div class="report-details">
+          <p><img class="icon-18" src="assets/img/total-time-icon.svg" alt="Tests Attempted"> Total time
+            spent on tests</p>
+          <p class="score"><span class="text-info">{{report.totaltimespent}}</span> </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="report-details pl-0">
+          <p><img class="icon-18" src="assets/img/score-icon.svg" alt="Tests Attempted"> Your highest
+            Score</p>
+          <p class="score"><span class="text-success">{{report.heighestscore * 4}}/720</span> </p>
+        </div>
+      </div>
+    </div>
+  </div>

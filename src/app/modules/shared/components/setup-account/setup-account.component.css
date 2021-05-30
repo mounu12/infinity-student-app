@@ -1,0 +1,97 @@
+.field-icon {
+  position: absolute; top:  15px; right: 10px;
+  z-index: 2;
+}
+
+.email-icon {
+  float: left;
+  margin-left: 25px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.error-msg {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #d60000;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.next-btn-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  margin: 0px 8px;
+  position: static;
+  width: 82px;
+  height: 45px;
+  left: 0px;
+  top: 0px;
+  border-radius: 56px;
+  border: none;
+  border-width: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  background: #263643;
+}
+
+.set-up-later {
+  position: static;
+  width: 400px;
+  height: 17px;
+  left: 90px;
+  top: 14px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #0C9968;
+  text-align: right;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0px 8px;
+}
+.set-up-later a{ color: #0C9968;}
+.stepDisplay {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #263643;
+  opacity: 0.6;
+}
+
+.setup-account-input-icons img {
+  position: absolute;
+}
+
+.setup-account-input-icons {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.setup-account-icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.setup-account-input-field-left {
+  width: 100%;
+  padding-left: 40px;
+  text-align: left;
+}

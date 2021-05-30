@@ -1,0 +1,176 @@
+<header class="wow fadeInUp profile" data-wow-delay="0.2s">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 ">
+        <a class="logo" href="#/dashboard"><img src="../../../../../../assets/img/logo-dark.svg" alt="Infinity Learn"> </a>
+        <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+        
+        <div class="logo-right">
+          <nav>
+            <ul>
+                <li class="nav-item dropdown" *ngIf="!isAuthenticated">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Products
+                  </a>
+                  <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" routerLink="/assesments">Assessments</a>
+                                    <a class="dropdown-item" href="#">Live classes</a>
+                                  </div> -->
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/assesments">
+                      <img class="normal" src="assets/img/assessments-icon-dark.svg" alt="Assessments">
+                      <img class="hover" src="assets/img/assessments-icon-hover.svg" alt="Assessments"> Assessments</a>
+                    <a class="dropdown-item" routerLink="/">
+                      <img class="normal" src="assets/img/live-classes-icon-dark.svg" alt="Live classes">
+                      <img class="hover" src="assets/img/live-classes-icon-hover.svg" alt="Live classes">
+                      Live classes</a>
+                  </div>
+                </li>
+                <li class="nav-item" *ngIf="!isAuthenticated">
+                  <a class="nav-link" routerLink="/about-us">About Us</a>
+                </li>
+            </ul>
+          </nav>
+          <div class="btn-group profile-btn-group" *ngIf="isAuthenticated">
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+               <img [src]="profilePhoto" (error)="setDefaultPic()" alt="">
+               <!-- <img src="../../../../../../assets/img/empty-profile.svg" alt="" /> -->
+            </button>
+              <div class="dropdown-menu dropdown-menu-lg-right">
+                  <button class="dropdown-item" type="button" (click)="showMyProfile()">
+                    <img src="../../../../../../assets/img/edit-profile-icon-dark.svg" alt="Edit Profile">Profile
+                  </button>
+
+                  <button class="dropdown-item" type="button" (click)="logout()">
+                    <img src="../../../../../../assets/img/logout-icon-dark.svg" alt="Logout">
+                    Logout
+                  </button>
+            </div>
+          </div>
+          <button *ngIf="!isAuthenticated" class="btn-login" type="button" data-toggle="modal" (click)="login()">LOGIN</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--Home page Header Start -->
+<header class="wow fadeInUp" data-wow-delay="0.2s" *ngIf="!is_exam_started">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <a class="logo" href="#/dashboard"><img src="assets/img/logo-dark.svg" alt="Infinity Learn"> </a>
+          <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+          <div class="logo-right">
+              <a class="m-logo" href="#/dashboard"><img src="assets/img/logo-dark.svg" alt="Infinity Learn"> </a>
+            <nav>
+              <ul>
+                <li class="nav-item dropdown" *ngIf="!isAuthenticated">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Products
+                  </a>
+                  <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/assesments">Assessments</a>
+                    <a class="dropdown-item" href="#">Live classes</a>
+                  </div> -->
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/assesments">
+                      <img class="normal" src="assets/img/assessments-icon-dark.svg" alt="Assessments">
+                      <img class="hover" src="assets/img/assessments-icon-hover.svg" alt="Assessments"> Assessments</a>
+                    <a class="dropdown-item" routerLink="/">
+                      <img class="normal" src="assets/img/live-classes-icon-dark.svg" alt="Live classes">
+                      <img class="hover" src="assets/img/live-classes-icon-hover.svg" alt="Live classes">
+                      Live classes</a>
+                  </div>
+                </li>
+                <li class="nav-item" *ngIf="!isAuthenticated">
+                  <a class="nav-link" routerLink="/about-us">About Us</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- <div class="btn-group profile-btn-group" *ngIf="isAuthenticated">
+              <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+               <img [src]="profilePhoto" (error)="setDefaultPic()" alt="">
+              </button>
+                <div class="dropdown-menu dropdown-menu-lg-right">
+                    <button class="dropdown-item" type="button" (click)="showMyProfile()">
+                      <img src="../../../../../../assets/img/edit-profile-icon-dark.svg" alt="Edit Profile">Profile
+                    </button>
+  
+                    <button class="dropdown-item" type="button" (click)="logout()">
+                      <img src="../../../../../../assets/img/logout-icon-dark.svg" alt="Logout">
+                      Logout
+                    </button>
+              </div>
+            </div> -->
+            <button *ngIf="!isAuthenticated" class="btn-login" type="button" data-toggle="modal" (click)="login()">LOGIN</button>
+            <span class="m-overlay"></span>
+          </div>
+          <div class="btn-group profile-btn-group" *ngIf="isAuthenticated">
+              <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+               <img [src]="profilePhoto" (error)="setDefaultPic()" alt="">
+              </button>
+                <div class="dropdown-menu dropdown-menu-lg-right">
+                    <button class="dropdown-item" type="button" (click)="showMyProfile()">
+                      <img src="../../../../../../assets/img/edit-profile-icon-dark.svg" alt="Edit Profile">Profile
+                    </button>
+  
+                    <button class="dropdown-item" type="button" (click)="logout()">
+                      <img src="../../../../../../assets/img/logout-icon-dark.svg" alt="Logout">
+                      Logout
+                    </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Header Start -->
+  <header class="wow fadeInUp exam" data-wow-delay="0.2s" *ngIf="is_exam_started && timer_header_for_routes.includes(current_route_url)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <a class="logo" href="#/dashboard/exampage"><img src="assets/img/logo-dark.svg" alt="Infinity Learn"> </a>
+          <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+          <div class="logo-right">
+            <p class="exam-type">{{examInfo.rulename}}</p>
+            <div class="exam-settings">
+              <div class="exam-timer">
+                <p><img class="icon-18" src="assets/img/timer-icon.svg" alt=""> Time remaining: <span
+                    [ngClass]="[ timerWarning ? 'in_warning' : '']" class="pl-2"  >{{timer_ticker }}</span></p>
+              </div>
+              <div class="dropdown instruction-dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/instruction-icon.svg" alt="Instructions">
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="goToInstructionPage()" href="javascript:void(0)">General Instructions</a>
+                </div>
+              </div>
+
+              <div class="dropdown instruction-dropdown">
+                <button disabled class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/question-list-icon.svg" alt="Question List">
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#/dashboard/exampage">Question List</a>
+                </div>
+              </div>
+              <button [disabled]="examInfo.issubmitted" class="btn-login" type="button" data-toggle="modal" data-target="#finishTestModal" (click)="confirmingSubmit()">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->

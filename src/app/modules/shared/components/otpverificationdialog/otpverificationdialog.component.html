@@ -1,0 +1,23 @@
+<div class="">
+    <mat-dialog-content class="">
+        <div class="font-14 heading">
+            <h4>{{ data?.message }}<span><button class="closeButton" (click)="closeDialogue()">X</button></span></h4>
+        </div>
+        <div class="py-10 font-8">
+            {{ data?.message2 }}
+        </div>
+        <form [formGroup]="otpForm">
+            <div class="py-10 text-center p-5">
+                <ng-otp-input [config]="config"></ng-otp-input>
+                <!-- (onInputChange)="onOtpChange($event)" -->
+            </div>
+            <div class="pt-10">
+                <button class="btn btn-primary btn-block" type="button" (click)="verifyOTP()">VERIFY OTP</button>
+            </div>
+            <div class="pt-10">
+                <button class="btn btn-block" type="button">RESEND OTP</button>
+            </div>
+        </form>
+    </mat-dialog-content>
+
+</div>
